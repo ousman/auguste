@@ -77,7 +77,7 @@
       <div class="w-clearfix grid" id="Grid">
         <!-- To be replaced by database data -->
   <?php for($i=0;$i<20; $i++){?>
-        <div class="mix print star" id="mix-2" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-1.html"><h4 class="text-port" data-ix="move-up">bla bla bla some name</h4><div class="sub-text" data-ix="move-up-2">Cliquer pour plus d'info</div></a>
+        <div class="mix print star" id="mix-2" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="<?= WEBROOT ?>photo"><h4 class="text-port" data-ix="move-up">bla bla bla some name</h4><div class="sub-text" data-ix="move-up-2">Cliquer pour plus d'info</div></a>
           <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port1.jpg">
             <div class="triangle">
               <div class="left-star">
