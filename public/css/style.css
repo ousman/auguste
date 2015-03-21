@@ -1530,12 +1530,12 @@ html.w-mod-js *[data-ix="sub-slider-3"] {
   .responsive-nav {
     padding-top: 7px;
     padding-bottom: 7px;
-    background-color: #273640;
+    background-color: #000;
   }
   .menu-button {
     margin-top: 5px;
     padding: 10px;
-    background-color: #2e3d47;
+    background-color: #282828;
     color: white;
     font-size: 27px;
   }
@@ -1547,7 +1547,7 @@ html.w-mod-js *[data-ix="sub-slider-3"] {
   }
   .res-menu {
     padding-top: 35px;
-    background-color: #2e3d47;
+    background-color: #282828;
   }
   .social-ico {
     display: none;
