@@ -38,7 +38,7 @@
         </a>
         
         <div class="copyright">
-          <div class="copyright-text">© 2015 AUGUSTE BUI</div>
+          <div class="copyright-text">© 2015 <a href="<?= WEBROOT ?>manage/">AUGUSTE BUI</a></div>
         </div>
       </div>
     </nav><!-- end navigation -->

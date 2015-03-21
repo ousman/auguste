@@ -1,10 +1,16 @@
 <?php 
-class Admin extends Controller{
+class Manage extends Controller{
 
         function index() {
         $d['view'] = array("title" => "Administration");
         $this->set($d);
         $this->render('index');
+    }
+
+    function newPhoto() {
+        $d['view'] = array("title" => "Administration");
+        $this->set($d);
+        $this->render('NewPhoto');
     }
 
      function cropPhoto() {
