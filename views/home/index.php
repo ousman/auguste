@@ -7,7 +7,7 @@
   <div class="section-wrapper">
     <div class="w-nav w-hidden-main responsive-nav" data-collapse="medium" data-animation="over-left" data-duration="400" data-contain="1">
       <div class="w-container">
-        <a class="w-nav-brand brand-res" href="<?= WEBROOT ?>"><img src="<?= WEBROOT ?>public/images/logo.png" width="70" alt="<?= WEBROOT ?>public/logo.png">
+        <a class="w-nav-brand brand-res" href="<?= WEBROOT ?>"><img src="<?= WEBROOT ?>public/images/logo-resp.png" width="150" alt="<?= WEBROOT ?>public/logo.png">
         </a>
         
         <!-- start responsive navigation -->

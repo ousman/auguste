@@ -38,7 +38,7 @@
         </a>
         
         <div class="copyright">
-          <div class="copyright-text">© 2015 Designed by Voltan</div>
+          <div class="copyright-text">© 2015 AUGUSTE BUI</div>
         </div>
       </div>
     </nav><!-- end navigation -->
