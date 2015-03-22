@@ -6,7 +6,7 @@
       </div>
     </div>
     <nav class="menu-wrapper">
-      <a class="w-inline-block brand" href="<?= WEBROOT ?>" data-ix="move"><img src="<?= WEBROOT ?>public/images/logo.png"  ><!-- logo goes here -->
+      <a class="w-inline-block brand" href="<?= WEBROOT ?>" data-ix="move"><img src="<?= WEBROOT ?>public/images/logo-resp.png"  ><!-- logo goes here -->
       </a>
 
       <div class="navigation" data-ix="move-2">
