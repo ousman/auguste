@@ -41,28 +41,17 @@
     </div>
     <div class="move-wrapper">
     
-      <!-- portfolio filter -->
-      <div class="w-hidden-tiny w-clearfix div-social">
+      <!-- Admin Menu -->
+      <div class="w-hidden-tiny w-clearfix div-social admin-menu">
         <div class="w-clearfix filters">
           <ul class="w-list-unstyled filter-list">
-            <li class="filter-iterm"><a class="filter" href="#" data-filter="all">All</a>
+            <li class="filter-iterm"><a class="filter" href="<?= WEBROOT ?>manage/" >Gestion G&eacute;n&eacute;rale</a>
             </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".illustration">Illustration</a>
-            </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".logotype">Logotype</a>
-            </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".print">Print</a>
-            </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".motion">Motion</a>
-            </li>
-            <li class="filter-iterm">
-              <a class="w-inline-block filter filter-star" href="#" data-filter=".star">
-                <i class="fa fa-star fa-2x"></i>
-              </a>
+            <li class="filter-iterm"><a class="filter" href="<?= WEBROOT ?>manage/newPhoto" >Ajout Photo</a>
             </li>
           </ul>
         </div>
-      </div><!-- end portfolio filter -->
+      </div><!-- end of Admin Menu -->
 
     <div class="w-container">
       <div class="mrg-top-bis">

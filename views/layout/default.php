@@ -43,7 +43,7 @@ return $fileParts;
   </script>
   
   <!-- favion -->
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="<?=WEBROOT?>public/img/favicon.ico">
   
   <!-- apple touch icon -->
   <link rel="apple-touch-icon" href="images/ico-phone.png">

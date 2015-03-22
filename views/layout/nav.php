@@ -11,7 +11,7 @@
 
       <div class="navigation" data-ix="move-2">
         <ul class="w-list-unstyled">
-          <li class="li-nav"><a class="nav-link active" href="index.html">August BUI</a>
+          <li class="li-nav"><a class="nav-link active" href="<?= WEBROOT ?>">August BUI</a>
             <div class="sub-nav">Parce qu'au fond il y a la couleur, la forme ne reste qu'un langage</div>
           </li>
           <li>
