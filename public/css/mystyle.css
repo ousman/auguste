@@ -68,6 +68,9 @@ margin-top:20px;
   border-left: 60px solid transparent;
   opacity: 0.5;
 }
+.triangle:hover{
+ opacity: 0.8;
+}
 
 .left-star {
   position: absolute;
@@ -77,6 +80,10 @@ margin-top:20px;
   display: block;
   color: white;
   font-size: 7px;
+}
+
+.left-star:hover{
+   color: #FFFD0D;
 }
 
 .fav-triangle {
