@@ -442,8 +442,8 @@ a.filter-star.active{
   margin-right: 0px;
   padding: 14px 14px 11px;
   border-color: #2c3d47 #2e3d47 #2e3d47;
-  background-color: #2e3d47;
-  color: white;
+  background-color: #000;
+  color: #FFFD0D;
   font-size: 8px;
 }
 .tittle-wrapper {
@@ -487,24 +487,6 @@ a.filter-star.active{
   margin-right: auto;
   margin-left: auto;
   background-color: #344652;
-}
-.left-star {
-  position: absolute;
-  top: -47px;
-  right: 11px;
-  z-index: 5;
-  display: block;
-  color: white;
-  font-size: 7px;
-}
-.triangle {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 0px;
-  height: 0px;
-  border-top: 60px solid #2c3d47;
-  border-left: 60px solid transparent;
 }
 
 /*  4. Elements  */

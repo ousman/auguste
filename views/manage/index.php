@@ -71,6 +71,9 @@
           </div>
           <p>Ci-dessous la liste complète des photos. Il suffit de cliquer sur la ligne correspondante dans le tableau pour pouvoir modifier ou ajouter une photo</p>
       
+      <div class="btn-spc"><a class="button add btn-full" href="<?= WEBROOT ?>manage/newPhoto">Ajouter Une Photo</a>
+          </div>
+
       <h4>Vos photos : </h4>
       <table class="table">
          <thead>
@@ -88,7 +91,7 @@
              <td>Mark</td>
              <td>Otto</td>
              <td>bla</td>
-             <td><a class="add" href="<?= WEBROOT ?>manage/newPhoto">Modifier</a></td>
+             <td><a class="modify" >Modifier</a></td>
           </tr>
           <tr>
              <td>2</td>

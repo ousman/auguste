@@ -79,30 +79,34 @@
 	<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
   </div>
   <div class="form-group">
-	<label for="exampleInputEmail1">Series</label>
-	<select class="form-control">
-	  <option>1</option>
-	  <option>2</option>
-	  <option>3</option>
-	  <option>4</option>
-	  <option>5</option>
-	</select>
+	   <label for="exampleInputEmail1">Series</label>
+  	<select class="form-control">
+  	  <option>1</option>
+  	  <option>2</option>
+  	  <option>3</option>
+  	  <option>4</option>
+  	  <option>5</option>
+  	</select>
   </div>
   <div class="form-group">
-	<label for="exampleInputEmail1">Tag</label>
-	<select class="form-control">
-	  <option>1</option>
-	  <option>2</option>
-	  <option>3</option>
-	  <option>4</option>
-	  <option>5</option>
-	</select>
+  	<label for="exampleInputEmail1">Tag</label>
+  	<select class="form-control">
+  	  <option>1</option>
+  	  <option>2</option>
+  	  <option>3</option>
+  	  <option>4</option>
+  	  <option>5</option>
+  	</select>
+  </div>
+  <div class="form-group">
+     <label for="exampleInputEmail1">Description</label>
+      <textarea class="form-control" rows="3"></textarea>
   </div>
 
   <div class="form-group">
-	<label for="exampleInputFile">File input</label>
-	<input type="file" id="exampleInputFile">
-	<p class="help-block">Example block-level help text here.</p>
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
   </div>
 
   <button type="submit" class="btn btn-default">Submit</button>
