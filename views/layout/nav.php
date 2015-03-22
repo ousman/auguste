@@ -33,7 +33,7 @@
         </ul>
       </div>
       <div class="social-ico" data-ix="move">
-        <a class="w-inline-block social" href="http://fr-fr.facebook.com/people/Auguste-Bui/100000277766236">
+        <a class="w-inline-block social" href="http://fr-fr.facebook.com/people/Auguste-Bui/100000277766236" target="blank">
         <i class="fa fa-facebook-square fa-2x"></i>
         </a>
         
