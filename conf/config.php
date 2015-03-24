@@ -1,10 +1,9 @@
 <?php
 // data base configuration
 define('dbuser','root'); // database user
-define('dbpassword','root'); // database password
 define('dbserver','localhost'); // database server adress
-define('dbname','bama'); // database name
-define('CFG_DB_DSN', 'mysql://'.dbuser.':'.dbpassword.'@'.dbserver.'/'.dbname); // DSN varchar for doctrine
+define('dbname','auguste'); // database name
+define('CFG_DB_DSN', 'mysql://'.dbuser.'@'.dbserver.'/'.dbname); // DSN varchar for doctrine
 
 define('SecurityManager','YES'); // activation du module de sécurité 'NO' pour désactiver.
 
