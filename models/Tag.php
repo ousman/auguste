@@ -12,5 +12,8 @@
  */
 class Tag extends BaseTag
 {
+    function init($label){
+        $this->Label = $label;
+    }
 
 }

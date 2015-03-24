@@ -13,4 +13,7 @@
 class Serie extends BaseSerie
 {
 
+    function init($label){
+        $this->Label = $label;
+    }
 }
