@@ -1,385 +1,68 @@
-#Facebook user
-FacebookUser:
-  tableName: FacebookUser
+#Serie:
+Serie:
+  tableName: Serie
   actAs:
     Timestampable: 
       created:
-        name: Date
+        name: Add_date
       updated:
-        name: DateModif
-  columns:
-    Mail:
-      type: string(255)
-      unique: true
-      notnull: true
-    FacebookId:
-      type: string(255)
-      unique: true
-    IdUser:
-      type: integer
-  relations:
-    user:
-      class: User
-      local: IdUser
-      foreign: id
-      onDelete: SET NULL
-      alias: User # on pourra acceder à l'objet avec User->Contact
-      foreignAlias: FacebookUser
-
-#les utilisateurs :
-User:
-  tableName: User
-  actAs:
-    Timestampable: 
-      created:
-        name: Date
-      updated:
-        name: DateModif
+        name: Mod_date
     Searchable:
-      fields: [id,Nom,Prenom,Mail,Tel]
+      fields: [id,Label]
   columns:
-    Mail:
+    Label:
       type: string(255)
-      unique: true
-      notnull: true
-    Password:
-      type: string(255)
-      notnull: true
-    Tel:
-      type: string(255)
-    Cle:
-      type: string(255)
-    Actif:
-      type: integer
-      default: 0
-    DateDerniereConnexion:
-      type: datetime
-    Forgot:
-      type: string(255)
-
-#contact ou adresse
-Contact:
-  tableName: Contact
-  columns:
-    Libelle:
-      type: string(255)
-    Tel:
-      type: string(255)
-    Adresse:
-      type: string(255)
-    Quartier:
-      type: string(255)
-    Commune:
-      type: string(255)
-    Ville:
-      type: string(255)
-    Pays:
-      type: string(255)
-    Commentaire:
-      type: string(255)
-    IdUser:
-      type: integer
-  relations:
-    user:
-      class: User
-      local: IdUser
-      foreign: id
-      onDelete: SET NULL
-      alias: User # on pourra acceder à l'objet avec User->Contact
-      foreignAlias: Contacts  
-
-# domaine      
-Domaine:
-  tableName: Domaine
-  columns:
-    Libelle:
-      type: string(255)
-    Url:
-      type: string(255)
-
-# categorie
-Categorie:
-  tableName: Categorie
-  columns:
-    Libelle:
-      type: string(255)
-    Url:
-      type: string(255)
-    Meta:
-      type: string(8000)
-    NombreImages:
-      type: integer
-    IdDomaine:
-      type: integer    
-  relations:
-    domaine:
-      class: Domaine
-      local: IdDomaine
-      foreign: id
-      onDelete: SET NULL
-      alias: Domaine # on pourra acceder à l'objet avec Categorie->Domaine
-      foreignAlias: Categories
-
-# heritage particulier
-Particulier:
-  tableName: Particulier
-  inheritance:
-    extends: User
-    type: column_aggregation
-    keyField: type
-    keyValue: 1
-  columns:
-    Nom:
-      type: string(255)
-    Prenom:
-      type: string(255)
-    Civ:
-      type: string(255)
-
-# heritage pro
-Pro:
-  tableName: Pro
-  inheritance:
-    extends: User
-    type: column_aggregation
-    keyField: type
-    keyValue: 2
-  columns:
-    Entreprise:
-      type: string(255)
-
-# annonces
-Annonce:
-  tableName: Annonce
+      
+#Tag:
+Tag:
+  tableName: Tag
   actAs:
     Timestampable: 
       created:
-        name: Date
+        name: Add_date
       updated:
-        name: DateModif
+        name: Mod_date
     Searchable:
-      fields: [Titre,Description,Prix,Meta,]
-      batchUpdates: true
+      fields: [id,Label]
   columns:
-    Titre:
+    Label:
       type: string(255)
-      notnull: true
-    Description:
-      type: string(8000)
-      notnull: true
-    Prix:
-      type: float
-    PrixEx:
-      type: float
-    Meta:
-      type: string(8000)
-    Compteur:
-      type: integer
-    Score:
-      type: integer
-    AfficherContact:
-      type: integer
-    AfficherInfosCompte:
-      type: integer
-    IdPromotion:
-      type: integer
-    IdCategorie:
-      type: integer
-    IdContact:
-      type: integer
-    IdUser:
-      type: integer
-    IdImagePrincipale:
-      type: integer
-    Actif:
-      type: integer
-      default: 1
-  relations:
-    imagePrincipale:
-      class: Image
-      local: IdImagePrincipale
-      foreign: id
-      onDelete: SET NULL
-      alias: ImagePrincipale # on pourra acceder à l'objet avec User->Contact
-      foreignAlias: AnnoncePrincipale
-    promotion:
-      class: Promotion
-      local: IdPromotion
-      foreign: id
-      onDelete: SET NULL
-      alias: Promotion # on pourra acceder à l'objet avec User->Contact
-      foreignAlias: Annonce
-    contact:
-      class: Contact
-      local: IdContact
-      foreign: id
-      onDelete: SET NULL
-      alias: Contact # on pourra acceder à l'objet avec User->Contact
-      foreignAlias: Annonces
-    Categorie:
-      class: Categorie
-      local: IdCategorie
-      foreign: id
-      onDelete: SET NULL
-      alias: Categorie # on pourra acceder à l'objet avec User->Contact
-      foreignAlias: Annonces
-    User:
-      class: User
-      local: IdUser
-      foreign: id
-      onDelete: SET NULL
-      alias: User # on pourra acceder à l'objet avec User->Contact
-      foreignAlias: Annonces
-
-#les promotions
-Promotion:
-  tableName: Promotion
-  columns:
-    Libelle:
-      type: string(255)
-    DateDebut:
-      type: datetime
-    DateFin:
-      type: datetime
-    Prix:
-      type: float
-
-#images
-Image:
-  tableName: Image
+      
+#Photo:
+Photo:
+  tableName: Photo
   actAs:
     Timestampable: 
       created:
-        name: Date
+        name: Add_date
       updated:
-        name: DateModif
+        name: Mod_date
+    Searchable:
+      fields: [id,Label]
   columns:
-    Fichier:
+    Label:
       type: string(255)
-      notnull: true
+    Extension:
+      type: string(255)
     Description:
-      type: string(8000)
-      notnull: true
-    IdAnnonce:
+      type: string(255)   
+    IdSerie:
+      type: integer
+    IdTag:
       type: integer
   relations:
-    Annonce:
-      class: Annonce
-      local: IdAnnonce
+    serie:
+      class: Serie
+      local: IdSerie
       foreign: id
       onDelete: SET NULL
-      alias: Annonce # on pourra acceder à l'objet avec User->Contact
-      foreignAlias: Images
-
-#Les messages
-Message:
-  tableName: Message
-  actAs:
-    Timestampable: 
-      created:
-        name: Date
-  columns:
-    Message:
-      type: string(255)
-    Vu:
-      type: integer
-    IdSender:
-      type: integer
-    IdReceiver:
-      type: integer
-    IdAnnonce:
-      type: integer  
-  relations:
-    sender:
-      class: User
-      local: IdSender
+      alias: Serie # on pourra acceder à l'objet avec User->Contact
+      foreignAlias: Serie
+    tag:
+      class: Serie
+      local: IdTag
       foreign: id
       onDelete: SET NULL
-      alias: Sender # on pourra acceder à l'objet avec User->Contact
-      foreignAlias: MessagesSender
-    receiver:
-      class: User
-      local: IdReceiver
-      foreign: id
-      onDelete: SET NULL
-      alias: Receiver # on pourra acceder à l'objet avec User->Contact
-      foreignAlias: MessagesReceiver
-    annonce:
-      class: Annonce
-      local: IdAnnonce
-      foreign: id
-      onDelete: SET NULL
-      alias: Annonce # on pourra acceder à l'objet avec User->Contact
-      foreignAlias: Messages
-#avis
-Avis:
-  tableName: Avis
-  actAs:
-    Timestampable: 
-      created:
-        name: Date
-  columns:
-    IdUser:
-      type: integer
-    IdAnnonce:
-      type: integer
-    Resume:
-      type: string(255)
-    Commentaire:
-      type: string(255)
-    NoteQualite:
-      type: integer
-    NotePrix:
-      type: integer    
-  relations:
-    annonce:
-      class: Annonce
-      local: IdAnnonce
-      foreign: id
-      onDelete: SET NULL
-      alias: Annonce # on pourra acceder à l'objet avec Categorie->Domaine
-      foreignAlias: Avis
-    User:
-      class: User
-      local: IdUser
-      foreign: id
-      onDelete: SET NULL
-      alias: User # on pourra acceder à l'objet avec Categorie->Domaine
-      foreignAlias: Avis
-# table annonce
-Pub:
-  tableName: Pub
-  columns:
-    IdAnnonce:
-      type: integer    
-  relations:
-    annonce:
-      class: Annonce
-      local: IdAnnonce
-      foreign: id
-      onDelete: SET NULL
-      alias: Annonce # on pourra acceder à l'objet avec Categorie->Domaine
-      foreignAlias: Pub
-# selection
-Selection:
-  tableName: Selection
-  columns:
-    IdAnnonce:
-      type: integer
-    IdUser:
-      type: integer    
-  relations:
-    annonce:
-      class: Annonce
-      local: IdAnnonce
-      foreign: id
-      onDelete: SET NULL
-      alias: Annonce # on pourra acceder à l'objet avec Categorie->Domaine
-      foreignAlias: Selections
-    User:
-      class: User
-      local: IdUser
-      foreign: id
-      onDelete: SET NULL
-      alias: User # on pourra acceder à l'objet avec Categorie->Domaine
-      foreignAlias: Selections
+      alias: Tag # on pourra acceder à l'objet avec User->Contact
+      foreignAlias: Tag
+      

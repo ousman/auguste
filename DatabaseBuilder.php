@@ -28,7 +28,7 @@ Doctrine_Core::createDatabases();
 
 // Création des fichiers de modèle à partir du schema.yml
 // Si vous n'utilisez pas le Yaml, n'exécutez pas cette ligne !
-//Doctrine_Core::generateModelsFromYaml(ROOT.'models/schema.yml', ROOT.'models', array('generateTableClasses' => true));
+Doctrine_Core::generateModelsFromYaml(ROOT.'models/schema.yml', ROOT.'models', array('generateTableClasses' => true));
 
 // Création des tables
 Doctrine_Core::createTablesFromModels(ROOT.'models');
@@ -37,7 +37,7 @@ $codeSql = file_get_contents("database.sql");
 
 //$codeSql = file_get_contents("databasePROD.sql");
 
-$st = $conn->execute($codeSql);
+//$st = $conn->execute($codeSql);
 
 
 echo utf8_decode("fin de création de la base de donnée et génération des objets du domain.<br> Les donnees ont été insérées dans la base de données.<br> Utiliser le compte admin/admin pour tester");
