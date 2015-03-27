@@ -361,9 +361,7 @@
                 <div class="row">
                     <div class="carousel gallery" id="imageContainer">
                         <div class="col-sm-6 col-md-3 img-cropped">                            
-                            <img src="../public/img/content/default.jpg" width="270" height="270" alt="">
-                            <br/>
-                            <label class="radio text-danger"><input type="radio" name="imagePrincipale" class="img-main" value=""/>Image Principale</label>
+                            <img src="<?=WEBROOT?>public/img/default.jpg" width="270" height="270" alt="">
                         </div>
                     </div>
                 </div>
@@ -411,7 +409,7 @@
                                                 <div class="col-md-7" style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC);">
                                                     <div class="avatar-wrapper">
                                                         <div class="img-container">
-                                                            <img id="crop-target" src="<?= WEBROOT ?>/public/img/content/default.jpg" alt="Picture">
+                                                            <img id="crop-target" src="<?= WEBROOT ?>public/img/default.jpg" alt="Picture">
                                                         </div>
                                                     </div>
                                                 </div>
