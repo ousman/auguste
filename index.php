@@ -57,6 +57,7 @@ if (file_exists('controllers/' . strtolower($controller) . '.php')) {
     if (!method_exists($controller, $action)) {
         if (get_class($controller) == "home") {
             $action = "index";
+           
         }
     }
 

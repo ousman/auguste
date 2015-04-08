@@ -3,7 +3,9 @@
 class Manage extends Controller {
 
     function index() {
-        $d['view'] = array("title" => "Administration");
+        $tof = new Photo();
+        $tof = Doctrine_Core::getTable("photo")->findAll();
+        $d['view'] = array("title" => "Administration", "photos", $photos);
         $this->set($d);
         $this->render('index');
     }
