@@ -41,7 +41,16 @@ return $fileParts;
       }
     });
   </script>
-  
+  <!-- JQUERY SCRIPTS -->
+  <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="<?= WEBROOT ?>public/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery.moutheme.js"></script>
+  <script type="text/javascript" src="<?= WEBROOT ?>public/js/modernizr.js"></script>
+  <script type="text/javascript" src="<?= WEBROOT ?>public/js/form.js"></script>
+  <script type="text/javascript" src="<?= WEBROOT ?>public/js/default.js"></script>
+  <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery.mixitup.min.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+    <script src="<?=WEBROOT?>public/js/app.js"></script>
   <!-- favion -->
   <link rel="shortcut icon" type="image/x-icon" href="<?=WEBROOT?>public/img/favicon.ico">
   
@@ -75,16 +84,7 @@ return $fileParts;
 <!--
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 !-->
-<script src="<?= WEBROOT ?>public/js/cropper.min.js"></script>
-<script src="<?= WEBROOT ?>public/js/cropping.js"></script>
-<script src="<?=WEBROOT?>public/js/app.js"></script>
-<!-- JQUERY SCRIPTS -->
-  <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery.moutheme.js"></script>
-  <script type="text/javascript" src="<?= WEBROOT ?>public/js/modernizr.js"></script>
-  <script type="text/javascript" src="<?= WEBROOT ?>public/js/form.js"></script>
-  <script type="text/javascript" src="<?= WEBROOT ?>public/js/default.js"></script>
-  <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery.mixitup.min.js"></script>
-  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+
+
 </body>
 </html>

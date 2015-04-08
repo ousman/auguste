@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?= WEBROOT ?>public/css/cropper.min.css">
-<script src="<?= WEBROOT ?>public/js/jquery.min.js"></script>
+<!--<script src="<?= WEBROOT ?>public/js/jquery.min.js"></script>-->
 <!--<script src="<?= WEBROOT ?>public/js/bootstrap.min.js"></script>-->
 <script type="text/javascript" src="<?= WEBROOT ?>public/js/cropper.min.js"></script>
 <script type="text/javascript" src="<?= WEBROOT ?>public/js/cropping.js"></script>
@@ -366,7 +366,7 @@
                     </div>
                 </div>
 
-                <div id="crop-avatar" class="container">
+                                <div id="crop-avatar" class="container">
                     <div id="add-pic" class="p_anch avatar-view" style="margin-bottom:10px; border-style:hidden;">
                         <button type="button" class="btn btn-primary bottom-padding my_popup_open"><i class="fa fa-cloud-download"></i>&nbsp; Ajouter Une Photo</button>
                     </div>
@@ -409,7 +409,7 @@
                                                 <div class="col-md-7" style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC);">
                                                     <div class="avatar-wrapper">
                                                         <div class="img-container">
-                                                            <img id="crop-target" src="<?= WEBROOT ?>public/img/default.jpg" alt="Picture">
+                                                            <img id="crop-target" src="<?= WEBROOT ?>/public/img/default.jpg" alt="Picture">
                                                         </div>
                                                     </div>
                                                 </div>
