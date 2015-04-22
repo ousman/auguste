@@ -89,5 +89,21 @@
   </div>
           <button id="save-tag" type="submit" class="btn btn-default">Ajouter</button>
 </form>
-
+<table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Libell&eacute;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($view['photos'] as $photo){?>
+                    <tr>
+                        <td><?= $photo->id ?></td>
+                        <td><?= $photo->Label ?></td>
+                    </tr>
+                    <?php }?>
+                </tbody>
+            </table>
+</div>
 
