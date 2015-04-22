@@ -94,6 +94,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Libell&eacute;</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -101,6 +102,7 @@
                     <tr>
                         <td><?= $photo->id ?></td>
                         <td><?= $photo->Label ?></td>
+                        <td><a href="<?= WEBROOT ?>manage/modifyPhoto/<?= $photo->id ?>" class="modify" >Modifier</a>&nbsp;<a href="<?= WEBROOT ?>manage/deletePhoto/<?= $photo->id ?>" class="modify" >Supprimer</a></td>
                     </tr>
                     <?php }?>
                 </tbody>
