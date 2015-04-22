@@ -12,5 +12,13 @@
  */
 class Photo extends BasePhoto
 {
-
+    function init($titre, $sousTitre, $description, $idSerie, $idTag, $img_src){
+        $this->Label = $titre;
+        $this->Extension = $sousTitre;
+        $this->Description = $description;
+        $this->IdSerie = $idSerie;
+        $this->IdTag = $idTag;
+        $this->Fichier = $img_src;
+        
+    }
 }

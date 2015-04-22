@@ -1,4 +1,4 @@
-  <!-- preloader -->
+ <!-- preloader -->
   <div class="loading">
     <div class="loader"><img src="images/puff.svg" alt="puff.svg">
     </div>
@@ -41,8 +41,8 @@
       <section class="inner-banner" id="top">
         <div class="w-container fixed-container">
           <div class="algin-center">
-            <h1 class="inner-sub" data-ix="move-3"><span class="domote">Series Label : </span>Name of the photo</h1>
-            <div class="tst-txt tst-ban" data-ix="move-3">Here the Intro to the picture of the image as is in the database. Some random bla ba bla.</div>
+            <h1 class="inner-sub" data-ix="move-3"><span class="domote"><?= $view['photo']->Serie->Label ?> <?= $view['photo']->Tag->Label ?> : </span><?= $view['photo']->Label ?></h1>
+            <div class="tst-txt tst-ban" data-ix="move-3"><?= $view['photo']->Extension ?></div>
           </div>
         </div>
       </section>
@@ -51,31 +51,28 @@
           <div class="w-row">
             <div class="w-col w-col-4 w-hidden-small w-hidden-tiny col-left"></div>
             <div class="w-col w-col-4 col-center">
-              <div class="btn-spc"><a class="button btn-small" href="index.html">Toutes Les Photos</a>
+              <div class="btn-spc"><a class="button btn-small" href="<?= WEBROOT ?>">Toutes Les Photos</a>
               </div>
             </div>
             <div class="w-col w-col-4 col-right">
-              <div class="btn-spc"><a class="button btn-small" href="portfolio-project-2.html">Photo Suivante<span class="arrow a-nxt">›</span></a>
-              </div>
+<!--              <div class="btn-spc"><a class="button btn-small" href="">Photo Suivante<span class="arrow a-nxt">›</span></a>
+              </div>-->
             </div>
           </div>
           <div class="i-stack">
-            <div class="spc-bott"><img src="<?= WEBROOT ?>public/gallery/city.jpg" alt="photo-tab1.jpg">
+            <div class="spc-bott"><img src="<?= WEBROOT ?>public/uploaded/<?= $view['photo']->Fichier ?>" alt="photo-tab1.jpg">
             </div>
 
             <div class="spc-bott">
-              <p>Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Etiam imperdiet imperdiet orci. Ut a nisl id ante tempus hendrerit. Proin pretium, leo ac pellentesque mollis, felis nunc ultrices eros, sed gravida augue augue mollis justo. Praesent egestas neque eu enim.
-                <br>
-                <br>Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Aenean vulputate eleifend tellus. Donec vitae sapien ut libero venenatis faucibus. Phasellus dolor. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor.
-                <br>
-                <br>Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Ut leo. Fusce vel dui. Aenean viverra rhoncus pede. Maecenas malesuada.</p>
+                <p><?= $view['photo']->Description ?></p>
             </div>
           </div>
         </div>
       </section>
       <section>
-        <div class="mix mix-5 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-1.html"><h4 class="text-port" data-ix="move-up">A4 Paper</h4><div class="sub-text" data-ix="move-up-2">Print</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port1.jpg">
+          <?php foreach($view['photos'] as $tof):?>
+        <div class="mix mix-5 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="<?= WEBROOT ?>photos/display/<?=$tof->id?>"><h4 class="text-port" data-ix="move-up"><?= $tof->Label ?></h4><div class="sub-text" data-ix="move-up-2"><?= $tof->Extension ?></div></a>
+          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/uploaded/<?= $tof->Fichier ?>" alt="port1.jpg">
             <div class="triangle">
               <div class="left-star">
                 <i class="fa fa-star fa-2x"></i>
@@ -83,42 +80,7 @@
             </div>
           </div>
         </div>
-        <div class="mix mix-5 logotype star" id="mix" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-2.html"><h4 class="text-port" data-ix="move-up">American Eagle</h4><div class="sub-text" data-ix="move-up-2">Logotype</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port4.jpg">
-            <div class="triangle">
-              <div class="left-star">
-                <i class="fa fa-star fa-2x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mix mix-5 illustration star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-3.html"><h4 class="text-port" data-ix="move-up">Harley</h4><div class="sub-text" data-ix="move-up-2">Illustration</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port17.jpg">
-            <div class="triangle">
-              <div class="left-star">
-                <i class="fa fa-star fa-2x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mix mix-5 illustration star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-4.html"><h4 class="text-port" data-ix="move-up">Yellow Monster</h4><div class="sub-text" data-ix="move-up-2">Illustration</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port12.jpg">
-            <div class="triangle">
-              <div class="left-star">
-                <i class="fa fa-star fa-2x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mix mix-5 illustration star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-2.html"><h4 class="text-port" data-ix="move-up">Dog</h4><div class="sub-text" data-ix="move-up-2">Illustration</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port16.jpg">
-            <div class="triangle">
-              <div class="left-star">
-                <i class="fa fa-star fa-2x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
+          <?php endforeach; ?>
       </section>
     </div>
   </div>

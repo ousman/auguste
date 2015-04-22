@@ -10,13 +10,23 @@ class Photos extends Controller {
 
     function display($id) {
         $tof = new Photo();
-        $tof = Doctrine_Core::getTable("photo")->find($id);
-        $d['view'] = array("title" => "display", "photo" => $tof);
+        $tof = Doctrine_Core::getTable("photo")->findOneById($id);
+                 
+        $photos = new Photo();
+        $q = Doctrine_Query::create()->from('Photo p');
+        $q = $q->orderBy('RAND()');
+        $q->limit(5);
+        $photos = $q->execute();
+        
+        $d['view'] = array("title" => "display", "photo" => $tof, "photos" => $photos);
+        
         $this->set($d);
-        //$this->render('extended');
+        $this->render('extended');
     }
     
     function search($photo = null, $serie = null, $tag = null){
+        $photos = new Photo();
+        $photo = $_POST['searchString'];
         $q = Doctrine_Query::create()->from('Photo p');
         if($serie != null)
         $q = $q->leftJoin("a.Serie s");
@@ -38,9 +48,15 @@ class Photos extends Controller {
         
         $photos = $q->execute();
         
-        $d['view'] = array("title" => "Etendu", "photos" => $photos);
+        $tags = new Tag();
+        $tags = Doctrine_Core::getTable('tag')->findAll();
+        
+        $series = new Serie();
+        $series = Doctrine_Core::getTable('serie')->findAll();
+        
+        $d['view'] = array("title" => "Etendu", "photos" => $photos, "tags" => $tags, "series" => $series);
         $this->set($d);
-        //$this->render('extended');
+        $this->render('searchResult');
         
     }
 

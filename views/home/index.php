@@ -47,13 +47,24 @@
           <ul class="w-list-unstyled filter-list">
             <li class="filter-iterm"><a class="filter" href="#" data-filter="all">All</a>
             </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".illustration">Illustration</a>
+            <li class="filter-iterm"><select class="filter" data-filter=".all" id="series">
+                        <option value="">S&eacute;rie</option>
+                        <?php foreach ($view['series'] as $serie):?>
+                        <option value="<?= $serie->id ?>"><?= $serie->Label ?></option>
+                        <?php endforeach; ?>
+                </select>
             </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".logotype">Logotype</a>
+            <li class="filter-iterm"><select class="filter" data-filter=".all" id="tags">
+                        <option value="">Tag</option>
+                        <?php foreach ($view['tags'] as $tag):?>
+                        <option value="<?= $tag->id ?>"><?= $tag->Label ?></option>
+                        <?php endforeach; ?>
+                </select>
             </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".print">Print</a>
-            </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".motion">Motion</a>
+            <li class="filter-iterm">
+                <form method="POST" action="<?=WEBROOT?>photos/search">
+                    <input class="filter" type="text" id="search" name="searchString" placeholder="Recherche"> <button class="filter" type="submit" id="searchPhoto">Go</button>
+                </form>
             </li>
             <li class="filter-iterm">
               <a class="w-inline-block filter filter-star" href="#" data-filter=".star">
@@ -67,9 +78,9 @@
       <!-- start portfolio -->
       <div class="w-clearfix grid" id="Grid">
         <!-- To be replaced by database data -->
-  <?php for($i=0;$i<20; $i++){?>
-        <div class="mix print star" id="mix-2" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="<?= WEBROOT ?>photo"><h4 class="text-port" data-ix="move-up">bla bla bla some name</h4><div class="sub-text" data-ix="move-up-2">Cliquer pour plus d'info</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port1.jpg">
+  <?php foreach($view['photos'] as $photo){?>
+        <div class="mix print star" id="mix-2" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="<?= WEBROOT ?>photos/display/<?=$photo->id?>"><h4 class="text-port" data-ix="move-up"><?= $photo->Label?></h4><div class="sub-text" data-ix="move-up-2">Cliquer pour plus d'info</div></a>
+          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/uploaded/<?= $photo->Fichier?>" alt="port1.jpg">
             <div class="triangle">
               <div class="left-star">
               <i class="fa fa-star fa-2x"></i>

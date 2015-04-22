@@ -55,7 +55,7 @@ if (file_exists('controllers/' . strtolower($controller) . '.php')) {
     $controller = new $controller();
 
     if (!method_exists($controller, $action)) {
-        if (get_class($controller) == "home") {
+        if (get_class($controller) == "manage") {
             $action = "index";
            
         }
@@ -63,12 +63,12 @@ if (file_exists('controllers/' . strtolower($controller) . '.php')) {
 
     if (method_exists($controller, $action)) {
         if (UserSecurity::Check($controller, $action) && AdminSecurity::Check($controller, $action)) {
-            // if(get_class($controller)=="shop" && $action=='index'){
-            // 	unset($params[0]);	
-            // }
-            // else{
-            // 	unset($params[0]); unset($params[1]);	
-            // } 
+             if(get_class($controller)=="manage" && $action=='index'){
+             	unset($params[0]);	
+             }
+             else{
+             	unset($params[0]); unset($params[1]);	
+             } 
             //echo get_class($controller)."=>".$action;
             //var_dump($params);
             //die;

@@ -7,7 +7,6 @@
  * 
  * @property string $Label
  * @property Doctrine_Collection $Serie
- * @property Doctrine_Collection $Tag
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -31,10 +30,6 @@ abstract class BaseSerie extends Doctrine_Record
         $this->hasMany('Photo as Serie', array(
              'local' => 'id',
              'foreign' => 'IdSerie'));
-
-        $this->hasMany('Photo as Tag', array(
-             'local' => 'id',
-             'foreign' => 'IdTag'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              'created' => 

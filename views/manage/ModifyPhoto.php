@@ -10,6 +10,7 @@
     var i = 0;
     var json = null;
     var in_crop = false;
+    var webroot = $("#webroot").val();
     $(function () {
 
         'use strict';
@@ -213,7 +214,7 @@
 
                 // crop photo with a php file using ajax call
                 $.ajax({
-                    url: 'cropPhoto/',
+                    url: webroot+'manage/cropPhoto/',
                     type: 'POST',
                     data: form,
                     processData: false,
@@ -250,8 +251,7 @@
     });
 
     $(document).ready(function () {
-        
-        $('#error').hide();
+        //On cache les divs
 
         $("#validateCrop").click(function (event) {
             $('.avatar-save').removeAttr('disabled');
@@ -289,7 +289,7 @@
                 $('#error').show();
             }
             else{
-                $('#save-img-form').submit();
+                $('#update-img-form').submit();
             }
             
         });
@@ -311,7 +311,7 @@
             success: function (data) {
                 $('.img-cropped').eq(k).remove();
                 $('#imageContainer').append('<div class="col-sm-6 col-md-3 img-cropped deleted-image-remplacement"><img src="../public/img/content/default.jpg" width="270" height="270" alt=""><br/><label class="radio text-danger"><input type="radio" name="imagePrincipale" class="img-main" value=""/>Image Principale</label></div>');
-                $("#img-main").val("");
+                $('#img-main').val("");
             }
         });
     }
@@ -387,51 +387,50 @@
 
             <h4>Formulaire d'ajout : </h4>
 
-            <form id='save-img-form' role="form" method="POST" action="<?=WEBROOT?>manage/addPhoto">
-                <div id="error" class="error-message">
+            <form id='update-img-form' role="form" method="POST" action="<?=WEBROOT?>manage/updatePhoto">
+                <div class="error-message" id="error">
                 </div>
+                <input type="hidden" name="id" value="<?= $view['photo']->id ?>">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Label</label>
-                    <input id="label" type="text" class="form-control" name="label" placeholder="Titre de l'image">
+                    <input type="text" class="form-control" id="label" name="label" placeholder="Titre de l'image" value="<?= $view['photo']->Label ?>">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Extension (Sous-titre)</label>
-                    <input id="extension" type="text" class="form-control" name="extension" placeholder="Sous-Titre de l'image">
+                    <input id="extension" type="text" class="form-control" name="extension" placeholder="Sous-Titre de l'image" value="<?= $view['photo']->Extension ?>">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Series</label>
                     <select id="serie-label" class="form-control" name="serie">
-                        <option value="">Choisissez une S&eacute;rie</option>
                         <?php foreach ($view['series'] as $serie): ?>
-                            <option value="<?= $serie->id ?>"><?= $serie->Label ?></option>
+                            <option value="<?= $serie->id ?>" <?php if($serie->id == $view['photo']->id) echo 'selected' ?>><?= $serie->Label ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Tag</label>
                     <select id="tag-label" class="form-control" name="tag">
-                            <option value="">Choisissez un Tag</option>
                         <?php foreach ($view['tags'] as $tag): ?>
-                            <option value="<?= $tag->id ?>"><?= $tag->Label ?></option>
+                            <option value="<?= $tag->id ?>" <?php if($tag->id == $view['photo']->id) echo 'selected' ?>><?= $tag->Label ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Description</label>
-                    <textarea id="description" class="form-control" rows="3" name="description"></textarea>
+                    <textarea id="description" class="form-control" rows="3" name="description"><?= $view['photo']->Description ?></textarea>
                 </div>
 
                 <div class="row">
                     <div class="carousel gallery" id="imageContainer">
                         <div class="col-sm-6 col-md-3 img-cropped">                            
-                            <img src="<?=WEBROOT?>public/img/default.jpg" width="270" height="270" alt="">
+                            <img src="<?=WEBROOT?>public/uploaded/<?= $view['photo']->Fichier ?>" width="270" height="270" alt="">
                         </div>
                     </div>
                 </div>
 
                                 <div id="crop-avatar" class="container">
                     <div id="add-pic" class="p_anch avatar-view" style="margin-bottom:10px; border-style:hidden;">
-                        <button type="button" class="btn btn-primary bottom-padding my_popup_open"><i class="fa fa-cloud-download"></i>&nbsp; Ajouter Une Photo</button>
+                        <button type="button" class="btn btn-primary bottom-padding my_popup_open"><i class="fa fa-cloud-download"></i>&nbsp; Modifier Une Photo</button>
                     </div>
                     <!-- Cropping modal -->
                     <div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
@@ -472,7 +471,7 @@
                                                 <div class="col-md-7" style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC);">
                                                     <div class="avatar-wrapper">
                                                         <div class="img-container">
-                                                            <img id="crop-target" src="<?= WEBROOT ?>/public/img/default.jpg" alt="Picture">
+                                                            <img id="crop-target" src="<?= WEBROOT ?>/public/uploaded/<?= $view['photo']->Fichier ?>" alt="Picture">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -518,7 +517,7 @@
                                     <!-- <div class="modal-footer">
                                       <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
                                     </div> -->
-                                    <input type="hidden" id="img-main" name="img"/>
+                                    <input type="hidden" id="img-main" name="img" value="<?= $view['photo']->Fichier ?>"/>
                                 </form>
                             </div>
                         </div>
@@ -528,7 +527,7 @@
                     <div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
                 </div>
                 
-                <button id="save-img" type="submit" class="btn btn-default">Ajouter</button>
-                
+                <button id="save-img" type="submit" class="btn btn-default">value="Ajouter"</button>
+
             </form>
 

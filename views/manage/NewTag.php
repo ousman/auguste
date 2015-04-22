@@ -1,3 +1,19 @@
+<script type="text/javascript">
+        $(document).ready(function () {
+        
+        $("#save-tag").click(function (event) {
+            event.preventDefault();
+            
+            if(!$("#tag-label").val() == "" || !$("#tag-label").val() == undefined){
+                $('#save-tag-form').submit();
+            }
+            else{
+                $('#save-tag-form').prepend('<div class="danger">Veuillez remplir le champs<div>');
+            }
+        });
+        
+    });
+</script>
 <!-- preloader -->
   <div class="loading">
     <div class="loader"><img src="<?= WEBROOT ?>public/images/puff.svg" alt="<?= WEBROOT ?>public/images/puff.svg">
@@ -66,12 +82,12 @@
       
       <h4>Formulaire d'ajout : </h4>
 
-      <form role="form" method="POST" action="<?= WEBROOT ?>manage/addTag">
+      <form id="save-tag-form" role="form" method="POST" action="<?= WEBROOT ?>manage/addTag">
   <div class="form-group">
 	<label for="exampleInputEmail1">Label</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="label">
+        <input id="tag-label" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="label">
   </div>
-  <button type="submit" class="btn btn-default">Ajouter</button>
+          <button id="save-tag" type="submit" class="btn btn-default">Ajouter</button>
 </form>
 
 

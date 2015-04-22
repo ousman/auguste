@@ -2,12 +2,29 @@
 class Format extends Controller {
 
     function index() {
-        $d['view'] = array("title" => "New Website");
+        $photos = new Photo();
+        $q = Doctrine_Query::create()->from('Photo p');
+        $q = $q->orderBy('RAND()');
+        $q->limit(20);
+        $photos = $q->execute();
+        
+        $tags = new Tag();
+        $tags = Doctrine_Core::getTable('tag')->findAll();
+        
+        $series = new Serie();
+        $series = Doctrine_Core::getTable('serie')->findAll();
+        
+        $d['view'] = array("title" => "New Website", "photos" => $photos, $photos, "tags" => $tags, "series" => $series);
         $this->set($d);
         $this->render('view-3');
     }
     function five() {
-        $d['view'] = array("title" => "New Website");
+        $photos = new Photo();
+        $q = Doctrine_Query::create()->from('Photo p');
+        $q = $q->orderBy('RAND()');
+        $q->limit(20);
+        $photos = $q->execute();
+        $d['view'] = array("title" => "New Website", "photos" => $photos, $photos, "tags" => $tags, "series" => $series);
         $this->set($d);
         $this->render('view-5');
     }

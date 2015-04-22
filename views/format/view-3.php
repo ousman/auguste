@@ -87,21 +87,32 @@
     
       <!-- portfolio filter -->
       <div class="w-hidden-tiny w-clearfix div-social">
-        <div class="w-clearfix filters">
+        <div class="filters">
           <ul class="w-list-unstyled filter-list">
             <li class="filter-iterm"><a class="filter" href="#" data-filter="all">All</a>
             </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".illustration">Illustration</a>
+            <li class="filter-iterm"><select class="filter" data-filter=".all" id="series">
+                        <option value="">S&eacute;rie</option>
+                        <?php foreach ($view['series'] as $serie):?>
+                        <option value="<?= $serie->id ?>"><?= $serie->Label ?></option>
+                        <?php endforeach; ?>
+                </select>
             </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".logotype">Logotype</a>
+            <li class="filter-iterm"><select class="filter" data-filter=".all" id="tags">
+                        <option value="">Tag</option>
+                        <?php foreach ($view['tags'] as $tag):?>
+                        <option value="<?= $tag->id ?>"><?= $tag->Label ?></option>
+                        <?php endforeach; ?>
+                </select>
             </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".print">Print</a>
-            </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".motion">Motion</a>
+            <li class="filter-iterm">
+                <form method="POST" action="<?=WEBROOT?>photos/search">
+                    <input class="filter" type="text" id="search" name="searchString" placeholder="Recherche"> <button class="filter" type="submit" id="searchPhoto">Go</button>
+                </form>
             </li>
             <li class="filter-iterm">
               <a class="w-inline-block filter filter-star" href="#" data-filter=".star">
-                <i class="fa fa-star fa-2x"></i>
+               <i class="fa fa-star fa-2x"></i>
               </a>
             </li>
           </ul>
@@ -110,8 +121,9 @@
       
       <!-- start portfolio -->
       <div class="w-clearfix grid" id="Grid">
-        <div class="mix mix-3 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-1.html"><h4 class="text-port" data-ix="move-up">Image Stack</h4><div class="sub-text" data-ix="move-up-2">Print</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port1.jpg" width="449px" height="449px">
+          <?php foreach($view['photos'] as $photo){?>
+          <div class="mix mix-3 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="<?= WEBROOT ?>photos/display/<?=$photo->id?>"><h4 class="text-port" data-ix="move-up"><?= $photo->Label ?></h4><div class="sub-text" data-ix="move-up-2">Cliquer ici pour plus d'infos</div></a>
+          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/uploaded/<?=$photo->Fichier?>" alt="port1.jpg">
             <div class="triangle">
               <div class="left-star">
                 <i class="fa fa-star fa-2x"></i>
@@ -119,96 +131,7 @@
             </div>
           </div>
         </div>
-        <div class="mix mix-3 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-1.html"><h4 class="text-port" data-ix="move-up">Image Stack</h4><div class="sub-text" data-ix="move-up-2">Print</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port1.jpg" width="449px" height="449px">
-            <div class="triangle">
-              <div class="left-star">
-                <i class="fa fa-star fa-2x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mix mix-3 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-1.html"><h4 class="text-port" data-ix="move-up">Image Stack</h4><div class="sub-text" data-ix="move-up-2">Print</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port1.jpg" width="449px" height="449px">
-            <div class="triangle">
-              <div class="left-star">
-                <i class="fa fa-star fa-2x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mix mix-3 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-1.html"><h4 class="text-port" data-ix="move-up">Image Stack</h4><div class="sub-text" data-ix="move-up-2">Print</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port1.jpg" width="449px" height="449px">
-            <div class="triangle">
-              <div class="left-star">
-                <i class="fa fa-star fa-2x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mix mix-3 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-1.html"><h4 class="text-port" data-ix="move-up">Image Stack</h4><div class="sub-text" data-ix="move-up-2">Print</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port1.jpg" width="449px" height="449px">
-            <div class="triangle">
-              <div class="left-star">
-                <i class="fa fa-star fa-2x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mix mix-3 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-1.html"><h4 class="text-port" data-ix="move-up">Image Stack</h4><div class="sub-text" data-ix="move-up-2">Print</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port1.jpg" width="449px" height="449px">
-            <div class="triangle">
-              <div class="left-star">
-                <i class="fa fa-star fa-2x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mix mix-3 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-1.html"><h4 class="text-port" data-ix="move-up">Image Stack</h4><div class="sub-text" data-ix="move-up-2">Print</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port1.jpg" width="449px" height="449px">
-            <div class="triangle">
-              <div class="left-star">
-                <i class="fa fa-star fa-2x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mix mix-3 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-1.html"><h4 class="text-port" data-ix="move-up">Image Stack</h4><div class="sub-text" data-ix="move-up-2">Print</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port1.jpg" width="449px" height="449px">
-            <div class="triangle">
-              <div class="left-star">
-                <i class="fa fa-star fa-2x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mix mix-3 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-1.html"><h4 class="text-port" data-ix="move-up">Image Stack</h4><div class="sub-text" data-ix="move-up-2">Print</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port1.jpg" width="449px" height="449px">
-            <div class="triangle">
-              <div class="left-star">
-                <i class="fa fa-star fa-2x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mix mix-3 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-1.html"><h4 class="text-port" data-ix="move-up">Image Stack</h4><div class="sub-text" data-ix="move-up-2">Print</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port1.jpg" width="449px" height="449px">
-            <div class="triangle">
-              <div class="left-star">
-                <i class="fa fa-star fa-2x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mix mix-3 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="portfolio-project-1.html"><h4 class="text-port" data-ix="move-up">Image Stack</h4><div class="sub-text" data-ix="move-up-2">Print</div></a>
-          <div class="img-wrapper"><img src="<?= WEBROOT ?>public/gallery/test.jpg" alt="port1.jpg" width="449px" height="449px">
-            <div class="triangle">
-              <div class="left-star">
-                <i class="fa fa-star fa-2x"></i>
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php }?>
         
   </div><!-- end portfolio -->
   

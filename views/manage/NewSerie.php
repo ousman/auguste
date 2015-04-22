@@ -1,3 +1,19 @@
+<script type="text/javascript">
+        $(document).ready(function () {
+        
+        $("#save-serie").click(function (event) {
+            event.preventDefault();
+            
+            if(!$("#serie-label").val() == "" || !$("#serie-label").val() == undefined){
+                 $('#save-serie-form').submit();
+            }
+            else{
+                $('#save-serie-form').prepend('<div class="danger">Veuillez remplir le champs<div>');
+            }
+        });
+        
+    });
+</script>
 <!-- preloader -->
   <div class="loading">
     <div class="loader"><img src="<?= WEBROOT ?>public/images/puff.svg" alt="<?= WEBROOT ?>public/images/puff.svg">
@@ -66,11 +82,11 @@
       
       <h4>Formulaire d'ajout : </h4>
 
-      <form role="form" method="POST" action="<?= WEBROOT ?>manage/addSerie">
+      <form id="save-serie-form" role="form" method="POST" action="<?= WEBROOT ?>manage/addSerie">
   <div class="form-group">
 	<label for="exampleInputEmail1">Label</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="label">
+        <input id="serie-label" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="label">
   </div>
-  <button type="submit" class="btn btn-default">Ajouter</button>
+<button id="save-serie" type="submit" class="btn btn-default">Ajouter</button>
 </form>
 

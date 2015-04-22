@@ -42,6 +42,8 @@ Photo:
   columns:
     Label:
       type: string(255)
+    Fichier:
+      type: string(255)
     Extension:
       type: string(255)
     Description:
@@ -59,7 +61,7 @@ Photo:
       alias: Serie # on pourra acceder à l'objet avec User->Contact
       foreignAlias: Serie
     tag:
-      class: Serie
+      class: Tag
       local: IdTag
       foreign: id
       onDelete: SET NULL

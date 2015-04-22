@@ -8,7 +8,14 @@ class Home extends Controller {
         $q = $q->orderBy('RAND()');
         $q->limit(20);
         $photos = $q->execute();
-        $d['view'] = array("title" => "New Website", "photos" => $photos);
+        
+        $tags = new Tag();
+        $tags = Doctrine_Core::getTable('tag')->findAll();
+        
+        $series = new Serie();
+        $series = Doctrine_Core::getTable('serie')->findAll();
+        
+        $d['view'] = array("title" => "New Website", "photos" => $photos, "tags" => $tags, "series" => $series);
         $this->set($d);
         $this->render('index');
     }

@@ -145,14 +145,10 @@ class CropAvatar {
             $tmp_img_w = $data->width;
             $tmp_img_h = $data->height;
             
-            if($tmp_img_w > 660 && $tmp_img_h > 660){
-                $dst_img_w = 660;
-                $dst_img_h = 660;
-            }
-            else{
-                $dst_img_w = $tmp_img_w;
-                $dst_img_h = $tmp_img_h;
-            }
+            
+                $dst_img_w = 1300;
+                $dst_img_h = 755;
+            
             
 
                 

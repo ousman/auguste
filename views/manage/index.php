@@ -1,3 +1,34 @@
+<script type="text/javascript">
+    var msg = "";
+    
+    function getUrlParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}
+function urldecode(str) {
+   return decodeURIComponent((str+'').replace(/\+/g, '%20'));
+}
+        
+        $(document).ready(function () {
+        $('#msg').hide();
+        
+            msg = unescape((getUrlParameter('msg')));
+        if (msg != "" && msg !== undefined) {
+            $('#msg').append(msg);
+            $('#msg').show();
+           
+        }
+    });
+</script>
 <!-- preloader -->
 <div class="loading">
     <div class="loader"><img src="<?= WEBROOT ?>public/images/puff.svg" alt="<?= WEBROOT ?>public/images/puff.svg">
@@ -58,6 +89,8 @@
         </div><!-- end of Admin Menu -->
 
         <div class="w-container">
+            <div id="msg" class="message">
+            </div>
             <div class="mrg-top-bis">
                 <h3>Bienvenu Philippe<span class="ex-sp"></span></h3>
                 <div class="line-con-bis"></div>
@@ -79,27 +112,15 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($view['photos'] as $photo){?>
                     <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>bla</td>
-                        <td><a class="modify" >Modifier</a></td>
+                        <td><?= $photo->id ?></td>
+                        <td><?= $photo->Label ?></td>
+                        <td><?= $photo->Serie->Label ?></td>
+                        <td><?= $photo->Tag->Label ?></td>
+                        <td><a href="<?= WEBROOT ?>manage/modifyPhoto/<?= $photo->id ?>" class="modify" >Modifier</a>&nbsp;<a href="<?= WEBROOT ?>manage/deletePhoto/<?= $photo->id ?>" class="modify" >Supprimer</a></td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>bla</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>bla</td>
-                        <td>@twitter</td>
-                    </tr>
+                    <?php }?>
                 </tbody>
             </table>
         </div>

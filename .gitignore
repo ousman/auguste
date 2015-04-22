@@ -3,3 +3,5 @@ conf/config.php
 nbproject/project.properties
 nbproject/project.xml
 conf/config.php
+public/uploaded/*
+public/original/*
