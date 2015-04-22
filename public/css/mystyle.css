@@ -626,3 +626,7 @@ span.ago{
 .no-scroll{
   overflow:hidden;
 }
+
+.change{
+  border-color:#FEFEFE !important;
+}

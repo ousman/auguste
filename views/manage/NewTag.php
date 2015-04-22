@@ -61,13 +61,13 @@
       <div class="w-hidden-tiny w-clearfix div-social admin-menu">
         <div class="w-clearfix filters">
           <ul class="w-list-unstyled filter-list">
-            <li class="filter-iterm"><a class="filter" href="<?= WEBROOT ?>manage/" >Gestion G&eacute;n&eacute;rale</a>
+            <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/" >Gestion G&eacute;n&eacute;rale</a>
             </li>
-            <li class="filter-iterm"><a class="filter" href="<?= WEBROOT ?>manage/newPhoto" >Ajout Photo</a>
+            <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newPhoto" >Ajout Photo</a>
             </li>
-            <li class="filter-iterm"><a class="filter" href="<?= WEBROOT ?>manage/newSerie" >Ajout Serie</a>
+            <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newSerie" >Ajout Serie</a>
             </li>
-            <li class="filter-iterm"><a class="filter" href="<?= WEBROOT ?>manage/newTag" >Ajout Tag</a>
+            <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newTag" >Ajout Tag</a>
             </li>
           </ul>
         </div>
@@ -85,7 +85,7 @@
       <form id="save-tag-form" role="form" method="POST" action="<?= WEBROOT ?>manage/addTag">
   <div class="form-group">
 	<label for="exampleInputEmail1">Label</label>
-        <input id="tag-label" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="label">
+        <input id="tag-label" type="text" class="form-control" id="exampleInputEmail1" placeholder="Tag ID" name="label">
   </div>
           <button id="save-tag" type="submit" class="btn btn-default">Ajouter</button>
 </form>

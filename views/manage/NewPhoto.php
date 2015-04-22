@@ -366,13 +366,13 @@
         <div class="w-hidden-tiny w-clearfix div-social admin-menu">
             <div class="w-clearfix filters">
                 <ul class="w-list-unstyled filter-list">
-                    <li class="filter-iterm"><a class="filter" href="<?= WEBROOT ?>manage/" >Gestion G&eacute;n&eacute;rale</a>
+                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/" >Gestion G&eacute;n&eacute;rale</a>
                     </li>
-                    <li class="filter-iterm"><a class="filter" href="<?= WEBROOT ?>manage/newPhoto" >Ajout Photo</a>
+                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newPhoto" >Ajout Photo</a>
                     </li>
-                    <li class="filter-iterm"><a class="filter" href="<?= WEBROOT ?>manage/newSerie" >Ajout Serie</a>
+                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newSerie" >Ajout Serie</a>
                     </li>
-                    <li class="filter-iterm"><a class="filter" href="<?= WEBROOT ?>manage/newTag" >Ajout Tag</a>
+                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newTag" >Ajout Tag</a>
                     </li>
                 </ul>
             </div>
