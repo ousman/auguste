@@ -187,7 +187,7 @@
                 console.log('ne pas rafraichir la page');
                 in_crop = false;
                 var img_src = blobURL;
-                $('#imageContainer img:eq(' + i + ')').attr('src', '../public/img/fancybox_loading@2x.gif');
+                $('#imageContainer img:eq(' + i + ')').attr('src', '../public/img/loading.gif');
                 console.log(photo_url);
                 console.log('img:' + trueImage);
 
@@ -225,22 +225,21 @@
 //                $('#photo_container').append(data);
                         //$('#imageContainer').append(data);
                         $('#imageContainer img:eq(' + i + ')').attr('src', data['img_src']);
-                        $('.img-cropped').eq(i).append('<button type="button" onclick="deleteImage(' + i + ')" style="position:absolute; top:0px !important">Supprimer</button>');
                         $('#img-main').eq(i).val(data['img_name']);
                         $('#inputImage').val('');
                         $('.avatar-save').prop('disabled', true);
-                        document.getElementById("crop-target").src = '../public/img/content/default.jpg';
-                        $('.cropper-container img').attr('src', '../public/img/content/default.jpg');
-                        $('.img-preview img').attr('src', '../public/img/content/default.jpg');
+                        document.getElementById("crop-target").src = '../public/img/default.jpg';
+                        $('.cropper-container img').attr('src', '../public/img/default.jpg');
+                        $('.img-preview img').attr('src', '../public/img/default.jpg');
                     },
                     error: function (e) {
                         console.log(e);
                         console.log('erreur');
                         $('#inputImage').val('');
                         $('.avatar-save').prop('disabled', true);
-                        document.getElementById("crop-target").src = '../public/img/content/default.jpg';
-                        $('.cropper-container img').attr('src', '../public/img/content/default.jpg');
-                        $('.img-preview img').attr('src', '../public/img/content/default.jpg');
+                        document.getElementById("crop-target").src = '../public/img/default.jpg';
+                        $('.cropper-container img').attr('src', '../public/img/default.jpg');
+                        $('.img-preview img').attr('src', '../public/img/default.jpg');
                     }});
 
             });

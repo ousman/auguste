@@ -40,7 +40,7 @@
 
   <!-- preloader -->
   <div class="loading">
-    <div class="loader"><img src="images/puff.svg" alt="puff.svg">
+    <div class="loader"><img src="<?=WEBROOT?>public/images/puff.svg" alt="puff.svg">
     </div>
   </div>
   

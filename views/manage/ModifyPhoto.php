@@ -226,7 +226,6 @@
 //                $('#photo_container').append(data);
                         //$('#imageContainer').append(data);
                         $('#imageContainer img:eq(' + i + ')').attr('src', data['img_src']);
-                        $('.img-cropped').eq(i).append('<button type="button" onclick="deleteImage(' + i + ')" style="position:absolute; top:0px !important">Supprimer</button>');
                         $('#img-main').eq(i).val(data['img_name']);
                         $('#inputImage').val('');
                         $('.avatar-save').prop('disabled', true);
@@ -252,7 +251,8 @@
 
     $(document).ready(function () {
         //On cache les divs
-
+        $('#error').hide();
+        
         $("#validateCrop").click(function (event) {
             $('.avatar-save').removeAttr('disabled');
         });
@@ -402,16 +402,18 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Series</label>
                     <select id="serie-label" class="form-control" name="serie">
+                        <option value="">Choisissez une S&eacute;rie</option>
                         <?php foreach ($view['series'] as $serie): ?>
-                            <option value="<?= $serie->id ?>" <?php if($serie->id == $view['photo']->id) echo 'selected' ?>><?= $serie->Label ?></option>
+                            <option value="<?= $serie->id ?>" <?php if($serie->id == $view['photo']->Serie->id) echo 'selected' ?>><?= $serie->Label ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Tag</label>
                     <select id="tag-label" class="form-control" name="tag">
+                        <option value="">Choisissez un Tag</option>
                         <?php foreach ($view['tags'] as $tag): ?>
-                            <option value="<?= $tag->id ?>" <?php if($tag->id == $view['photo']->id) echo 'selected' ?>><?= $tag->Label ?></option>
+                            <option value="<?= $tag->id ?>" <?php if($tag->id == $view['photo']->Tag->id) echo 'selected' ?>><?= $tag->Label ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
