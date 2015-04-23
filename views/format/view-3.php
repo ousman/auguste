@@ -91,17 +91,17 @@
           <ul class="w-list-unstyled filter-list">
             <li class="filter-iterm"><a class="filter" href="#" data-filter="all">All</a>
             </li>
-            <li class="filter-iterm"><select class="filter" data-filter=".all" id="series">
+            <li class="filter-iterm"><select class="filter" data-filter=".series" id="series">
                         <option value="">S&eacute;rie</option>
                         <?php foreach ($view['series'] as $serie):?>
                         <option value="<?= $serie->id ?>"><?= $serie->Label ?></option>
                         <?php endforeach; ?>
                 </select>
             </li>
-            <li class="filter-iterm"><select class="filter" data-filter=".all" id="tags">
+            <li class="filter-iterm"><select class="filter" data-filter=".tags" id="tags">
                         <option value="">Tag</option>
                         <?php foreach ($view['tags'] as $tag):?>
-                        <option value="<?= $tag->id ?>"><?= $tag->Label ?></option>
+                        <option class="filter" data-filter=".<?= strtolower($tag->Label) ?>" value="<?= $tag->id ?>"><?= $tag->Label ?></option>
                         <?php endforeach; ?>
                 </select>
             </li>
@@ -122,7 +122,7 @@
       <!-- start portfolio -->
       <div class="w-clearfix grid" id="Grid">
           <?php foreach($view['photos'] as $photo){?>
-          <div class="mix mix-3 print star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="<?= WEBROOT ?>photos/display/<?=$photo->id?>"><h4 class="text-port" data-ix="move-up"><?= $photo->Label ?></h4><div class="sub-text" data-ix="move-up-2">Cliquer ici pour plus d'infos</div></a>
+          <div class="mix mix-3 star <?= strtolower($photo->Serie->Label)?> <?= strtolower($photo->Tag->Label)?>" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="<?= WEBROOT ?>photos/display/<?=$photo->id?>"><h4 class="text-port" data-ix="move-up"><?= $photo->Label ?></h4><div class="sub-text" data-ix="move-up-2">Cliquer ici pour plus d'infos</div></a>
           <div class="img-wrapper"><img src="<?= WEBROOT ?>public/uploaded/<?=$photo->Fichier?>" alt="port1.jpg">
             <div class="triangle">
               <div class="left-star">

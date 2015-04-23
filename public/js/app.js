@@ -1,13 +1,18 @@
-$( "#category li a" ).click(function() { 
-    // Get data of category
-    var customType = $( this ).data('filter'); // category
-    console.log(customType);
-    console.log(posts.length); // Length of articles
+$(document).ready(function () {
+    $('#series').on('change', function () {
+        var filter = '.'+$('#series').find(":selected").text().toLowerCase();
+        $('#series').attr('data-filter', filter);
+        $('#series').removeClass('active');
+        $('#series').find(":selected").addClass('active');
+        console.log(filter);
+    });
     
-    posts
-        .hide()
-        .filter(function () {
-            return $(this).data('cat') === customType;
-        })
-        .show();
+        $('#tags').on('change', function () {
+        var filter = '.'+$('#tags').find(":selected").text().toLowerCase();
+        $('#tags').attr('data-filter', filter);
+        $('#tags').removeClass('active');
+        $('#tags').find(":selected").addClass('active');
+        console.log(filter);
+    });
+    
 });

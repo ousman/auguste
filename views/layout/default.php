@@ -49,8 +49,9 @@ return $fileParts;
   <script type="text/javascript" src="<?= WEBROOT ?>public/js/form.js"></script>
   <script type="text/javascript" src="<?= WEBROOT ?>public/js/default.js"></script>
   <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery.mixitup.min.js"></script>
+  <script type="text/javascript" src="<?=WEBROOT?>public/js/app.js"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-    <script src="<?=WEBROOT?>public/js/app.js"></script>
+    
   <!-- favion -->
   <link rel="shortcut icon" type="image/x-icon" href="<?=WEBROOT?>public/img/favicon.ico">
   
