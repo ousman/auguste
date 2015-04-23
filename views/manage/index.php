@@ -118,8 +118,8 @@ function urldecode(str) {
                     <tr>
                         <td><?= $photo->id ?></td>
                         <td><?= $photo->Label ?></td>
-                        <td><?= $photo->Serie->Label ?></td>
-                        <td><?= $photo->Tag->Label ?></td>
+                        <td><?php if($photo->Serie->Label != null) echo $photo->Serie->Label; else echo 'Aucune s&eacute;rie';  ?></td>
+                        <td><?php if($photo->Tag->Label != null) $photo->Tag->Label; else echo 'Aucune s&eacute;rie';  ?></td>
                         <td><a href="<?= WEBROOT ?>manage/modifyPhoto/<?= $photo->id ?>"><button type="button" class="btn btn-default">Modifier</button></a>&nbsp;<a href="<?= WEBROOT ?>manage/deletePhoto/<?= $photo->id ?>"><button type="button" class="btn btn-danger">Supprimer</button></a></td>
                     </tr>
                     <?php }?>
