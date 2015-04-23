@@ -370,9 +370,9 @@
                     </li>
                     <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newPhoto" >Ajout Photo</a>
                     </li>
-                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newSerie" >Ajout Serie</a>
+                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/series" >S&eacute;ries</a>
                     </li>
-                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newTag" >Ajout Tag</a>
+                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/tags" >Tags</a>
                     </li>
                 </ul>
             </div>
