@@ -8,7 +8,7 @@
                 $('#save-tag-form').submit();
             }
             else{
-                $('#save-tag-form').prepend('<div class="danger">Veuillez remplir le champs<div>');
+                $('#save-tag-form').prepend('<div class="alert alert-danger">Veuillez remplir le champs<div>');
             }
         });
         
@@ -59,18 +59,18 @@
     
       <!-- Admin Menu -->
       <div class="w-hidden-tiny w-clearfix div-social admin-menu">
-        <div class="w-clearfix filters">
-          <ul class="w-list-unstyled filter-list">
-            <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/" >Gestion G&eacute;n&eacute;rale</a>
-            </li>
-            <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newPhoto" >Ajout Photo</a>
-            </li>
-            <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newSerie" >Ajout Serie</a>
-            </li>
-            <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newTag" >Ajout Tag</a>
-            </li>
-          </ul>
-        </div>
+            <div class="w-clearfix filters">
+                <ul class="w-list-unstyled filter-list">
+                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/" >Gestion G&eacute;n&eacute;rale</a>
+                    </li>
+                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newPhoto" >Ajout Photo</a>
+                    </li>
+                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/series" >S&eacute;ries</a>
+                    </li>
+                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/tags" >Tags</a>
+                    </li>
+                </ul>
+            </div>
       </div><!-- end of Admin Menu -->
 
     <div class="w-container">
@@ -89,23 +89,5 @@
   </div>
           <button id="save-tag" type="submit" class="btn btn-default">Ajouter</button>
 </form>
-<table class="table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Libell&eacute;</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach($view['photos'] as $photo){?>
-                    <tr>
-                        <td><?= $photo->id ?></td>
-                        <td><?= $photo->Label ?></td>
-                        <td><a href="<?= WEBROOT ?>manage/modifyPhoto/<?= $photo->id ?>" class="modify" >Modifier</a>&nbsp;<a href="<?= WEBROOT ?>manage/deletePhoto/<?= $photo->id ?>" class="modify" >Supprimer</a></td>
-                    </tr>
-                    <?php }?>
-                </tbody>
-            </table>
 </div>
 

@@ -388,7 +388,7 @@
             <h4>Formulaire d'ajout : </h4>
 
             <form id='save-img-form' role="form" method="POST" action="<?=WEBROOT?>manage/addPhoto">
-                <div id="error" class="error-message">
+                <div id="error" class="alert alert-danger">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Label</label>

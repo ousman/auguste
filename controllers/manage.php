@@ -83,7 +83,7 @@ class Manage extends Controller {
         $serie->init($serieLabel);
         $serie->save();
         $msg = "La S&eacute;rie a &eacute;t&eacute; enregistr&eacute;";
-        $this->redirect('manage?msg='.$msg, 0);
+        $this->redirect('manage/series?msg='.$msg, 0);
     }
     
     function addTag() {
@@ -92,7 +92,7 @@ class Manage extends Controller {
         $tag->init($tagLabel);
         $tag->save();
         $msg = "Le Tag a &eacute;t&eacute; enregistr&eacute;";
-        $this->redirect('manage?msg='.$msg, 0);
+        $this->redirect('manage/tags?msg='.$msg, 0);
     }
     
     function addPhoto(){
@@ -108,7 +108,7 @@ class Manage extends Controller {
         $photo->save();
         
         $msg = "La Photo a &eacute;t&eacute; enregistr&eacute;";
-        $this->redirect('manage?msg='.$msg, 0);
+        $this->redirect('manage/tags?msg='.$msg, 0);
     }
     
     function updateTag(){
@@ -120,7 +120,7 @@ class Manage extends Controller {
         $tag->save();
         
         $msg = "Le Tag a &eacute;t&eacute; modifi&eacute;e";
-        $this->redirect('tags?msg='.$msg, 0);
+        $this->redirect('manage/tags?msg='.$msg, 0);
     }
     
     function updateSerie(){
@@ -132,7 +132,7 @@ class Manage extends Controller {
         $serie->save();
         
         $msg = "La S&eacute;rie a &eacute;t&eacute; modifi&eacute;e";
-        $this->redirect('series?msg='.$msg, 0);
+        $this->redirect('manage/series?msg='.$msg, 0);
     }
     
     
@@ -161,6 +161,26 @@ class Manage extends Controller {
         
         $msg = "La photo a &eacute;t&eacute; suprim&eacute;e";
         $this->redirect('manage?msg='.$msg, 0);
+        
+    }
+    
+    function deleteTag($id){
+        $tag = new Tag();
+        $tag = Doctrine_Core::getTable("tag")->findOneById($id);
+        $tag->delete();
+        
+        $msg = "Le tag a &eacute;t&eacute; suprim&eacute;e";
+        $this->redirect('manage/tags?msg='.$msg, 0);
+        
+    }
+    
+    function deleteSerie($id){
+        $serie = new Serie();
+        $serie = Doctrine_Core::getTable("serie")->findOneById($id);
+        $serie->delete();
+        
+        $msg = "La s&eacute;rie a &eacute;t&eacute; suprim&eacute;e";
+        $this->redirect('manage/series?msg='.$msg, 0);
         
     }
     

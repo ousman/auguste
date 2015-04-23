@@ -8,7 +8,7 @@
                  $('#save-serie-form').submit();
             }
             else{
-                $('#save-serie-form').prepend('<div class="danger">Veuillez remplir le champs<div>');
+                $('#save-serie-form').prepend('<div class="alert alert-danger">Veuillez remplir le champs<div>');
             }
         });
         
@@ -84,7 +84,7 @@
 
       <form id="save-serie-form" role="form" method="POST" action="<?= WEBROOT ?>manage/updateSerie">
   <div class="form-group">
-	<input id="tag-label" type="text" class="form-control" id="exampleInputEmail1" placeholder="Serie ID" name="label" value="<?=$view['serie']->Label?>">
+	<input id="serie-label" type="text" class="form-control" id="exampleInputEmail1" placeholder="Serie ID" name="label" value="<?=$view['serie']->Label?>">
         <input type="hidden" name="id" value="<?=$view['serie']->id ?>">
   </div>
 <button id="save-serie" type="submit" class="btn btn-default">Modifier</button>

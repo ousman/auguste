@@ -99,7 +99,7 @@ function urldecode(str) {
             </div>
             <p>Ci-dessous la liste complète des s&eacute;rie. Il suffit de cliquer sur la ligne correspondante dans le tableau pour pouvoir modifier ou ajouter une s&eacute;rie</p>
 
-            <div class="btn-spc"><a class="button add btn-full" href="<?= WEBROOT ?>manage/newPhoto">Ajouter Une S&eacute;rie</a>
+            <div class="btn-spc"><a class="button add btn-full" href="<?= WEBROOT ?>manage/newSerie">Ajouter Une S&eacute;rie</a>
             </div>
 
             <h4>Vos photos : </h4>
@@ -116,7 +116,7 @@ function urldecode(str) {
                     <tr>
                         <td><?= $serie->id ?></td>
                         <td><?= $serie->Label ?></td>
-                        <td><a href="<?= WEBROOT ?>manage/modifyPhoto/<?= $serie->id ?>"><button type="button" class="btn btn-default">Modifier</button></a>&nbsp;<a href="<?= WEBROOT ?>manage/deletePhoto/<?= $serie->id ?>"><button type="button" class="btn btn-danger">Supprimer</button></a></td>
+                        <td><a href="<?= WEBROOT ?>manage/modifySerie/<?= $serie->id ?>"><button type="button" class="btn btn-default">Modifier</button></a>&nbsp;<a href="<?= WEBROOT ?>manage/deleteSerie/<?= $serie->id ?>"><button type="button" class="btn btn-danger">Supprimer</button></a></td>
                     </tr>
                     <?php }?>
                 </tbody>

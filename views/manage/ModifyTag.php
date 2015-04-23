@@ -8,7 +8,7 @@
                 $('#save-tag-form').submit();
             }
             else{
-                $('#save-tag-form').prepend('<div class="danger">Veuillez remplir le champs<div>');
+                $('#save-tag-form').prepend('<div class="alert alert-danger">Veuillez remplir le champs<div>');
             }
         });
         
