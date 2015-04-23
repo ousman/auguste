@@ -47,7 +47,7 @@
           <ul class="w-list-unstyled filter-list">
             <li class="filter-iterm"><a class="filter" href="#" data-filter="all">All</a>
             </li>
-            <li class="filter-iterm"><select class="filter" data-filter=".all" id="series">
+            <li class="filter-iterm"><select class="filter" data-filter=".poiuy" id="series">
                         <option value="">S&eacute;rie</option>
                         <?php foreach ($view['series'] as $serie):?>
                         <option value="<?= $serie->id ?>"><?= $serie->Label ?></option>
@@ -79,7 +79,7 @@
       <div class="w-clearfix grid" id="Grid">
         <!-- To be replaced by database data -->
   <?php foreach($view['photos'] as $photo){?>
-        <div class="mix print star" id="mix-2" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="<?= WEBROOT ?>photos/display/<?=$photo->id?>"><h4 class="text-port" data-ix="move-up"><?= $photo->Label?></h4><div class="sub-text" data-ix="move-up-2">Cliquer pour plus d'info</div></a>
+        <div class="mix print star poiuy" id="mix-2" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="<?= WEBROOT ?>photos/display/<?=$photo->id?>"><h4 class="text-port" data-ix="move-up"><?= $photo->Label?></h4><div class="sub-text" data-ix="move-up-2">Cliquer pour plus d'info</div></a>
           <div class="img-wrapper"><img src="<?= WEBROOT ?>public/uploaded/<?= $photo->Fichier?>" alt="port1.jpg">
             <div class="triangle">
               <div class="left-star">

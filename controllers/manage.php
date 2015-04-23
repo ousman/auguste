@@ -9,7 +9,24 @@ class Manage extends Controller {
         $this->set($d);
         $this->render('index');
     }
-
+    
+    
+    function tags(){
+        $tag = new Tag();
+        $tag = Doctrine_Core::getTable("tag")->findAll();
+        $d['view'] = array("title" => "Administration", "tags"=> $tag);
+        $this->set($d);
+        $this->render('tags');
+    }
+    
+    function series(){
+        $serie = new Serie();
+        $serie = Doctrine_Core::getTable("serie")->findAll();
+        $d['view'] = array("title" => "Administration", "series"=> $serie);
+        $this->set($d);
+        $this->render('series');
+    }
+    
     function newTag() {
         $d['view'] = array("title" => "Administration");
         $this->set($d);
@@ -42,6 +59,22 @@ class Manage extends Controller {
         $d['view'] = array("title" => "Administration", "series" => $series, "tags" =>$tags, "photo" =>$tof);
         $this->set($d);
         $this->render('ModifyPhoto');
+    }
+    
+    function modifyTag($id){
+        $tag = new Tag();
+        $tag = Doctrine_Core::getTable('tag')->find($id);
+        $d['view'] = array("title" => "Administration", "tag" =>$tag);
+        $this->set($d);
+        $this->render('ModifyTag');
+    }
+    
+    function modifySerie($id){
+        $serie = new Serie();
+        $serie = Doctrine_Core::getTable('serie')->find($id);
+        $d['view'] = array("title" => "Administration", "serie" =>$serie);
+        $this->set($d);
+        $this->render('ModifySerie');
     }
 
     function addSerie() {
@@ -77,6 +110,32 @@ class Manage extends Controller {
         $msg = "La Photo a &eacute;t&eacute; enregistr&eacute;";
         $this->redirect('manage?msg='.$msg, 0);
     }
+    
+    function updateTag(){
+        $titre = $_POST['label'];
+        
+        $tag = new Tag();
+        $tag = Doctrine_Core::getTable("tag")->findOneById($_POST['id']);
+        $tag->init($titre);
+        $tag->save();
+        
+        $msg = "Le Tag a &eacute;t&eacute; modifi&eacute;e";
+        $this->redirect('tags?msg='.$msg, 0);
+    }
+    
+    function updateSerie(){
+        $titre = $_POST['label'];
+        
+        $serie = new Serie();
+        $serie = Doctrine_Core::getTable("serie")->findOneById($_POST['id']);
+        $serie->init($titre);
+        $serie->save();
+        
+        $msg = "La S&eacute;rie a &eacute;t&eacute; modifi&eacute;e";
+        $this->redirect('series?msg='.$msg, 0);
+    }
+    
+    
     
     function updatePhoto(){
         $tag = $_POST['tag'];

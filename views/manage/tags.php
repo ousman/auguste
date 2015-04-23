@@ -97,9 +97,9 @@ function urldecode(str) {
                 <h3>Bienvenu Philippe<span class="ex-sp"></span></h3>
                 <div class="line-con-bis"></div>
             </div>
-            <p>Ci-dessous la liste complète des photos. Il suffit de cliquer sur la ligne correspondante dans le tableau pour pouvoir modifier ou ajouter une photo</p>
+            <p>Ci-dessous la liste complète des tags. Il suffit de cliquer sur la ligne correspondante dans le tableau pour pouvoir modifier ou ajouter un tag</p>
 
-            <div class="btn-spc"><a class="button add btn-full" href="<?= WEBROOT ?>manage/newPhoto">Ajouter Une Photo</a>
+            <div class="btn-spc"><a class="button add btn-full" href="<?= WEBROOT ?>manage/newTag">Ajouter Un Tag</a>
             </div>
 
             <h4>Vos photos : </h4>
@@ -108,22 +108,17 @@ function urldecode(str) {
                     <tr>
                         <th>ID</th>
                         <th>Libell&eacute;</th>
-                        <th>Serie</th>
-                        <th>Tag</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($view['photos'] as $photo){?>
+                    <?php foreach($view['tags'] as $tag){?>
                     <tr>
-                        <td><?= $photo->id ?></td>
-                        <td><?= $photo->Label ?></td>
-                        <td><?= $photo->Serie->Label ?></td>
-                        <td><?= $photo->Tag->Label ?></td>
-                        <td><a href="<?= WEBROOT ?>manage/modifyPhoto/<?= $photo->id ?>"><button type="button" class="btn btn-default">Modifier</button></a>&nbsp;<a href="<?= WEBROOT ?>manage/deletePhoto/<?= $photo->id ?>"><button type="button" class="btn btn-danger">Supprimer</button></a></td>
+                        <td><?= $tag->id ?></td>
+                        <td><?= $tag->Label ?></td>
+                        <td><a href="<?= WEBROOT ?>manage/modifyTag/<?= $tag->id ?>"><button type="button" class="btn btn-default">Modifier</button></a>&nbsp;<a href="<?= WEBROOT ?>manage/deleteTag/<?= $tag->id ?>"><button type="button" class="btn btn-danger">Supprimer</button></a></td>
                     </tr>
                     <?php }?>
                 </tbody>
             </table>
         </div>
-

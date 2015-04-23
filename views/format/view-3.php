@@ -45,7 +45,7 @@
   </div>
   
   <!-- start navigation -->
-  <?php include 'nav.php';?>
+  <?php //include 'nav.php';?>
   
   </div>
   <div class="section-wrapper">

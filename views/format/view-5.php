@@ -45,7 +45,7 @@
   </div>
   
   <!-- start navigation -->
-    <?php include 'nav.php';?>
+    <?php //include 'nav.php';?>
     
   <div class="section-wrapper">
     <div class="w-nav w-hidden-main responsive-nav" data-collapse="medium" data-animation="over-left" data-duration="400" data-contain="1">
