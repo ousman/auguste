@@ -91,13 +91,6 @@
           <ul class="w-list-unstyled filter-list">
             <li class="filter-iterm"><a class="filter" href="#" data-filter="all">All</a>
             </li>
-            <li class="filter-iterm"><select class="filter" data-filter=".series" id="series">
-                        <option value="">S&eacute;rie</option>
-                        <?php foreach ($view['series'] as $serie):?>
-                        <option value="<?= $serie->id ?>"><?= $serie->Label ?></option>
-                        <?php endforeach; ?>
-                </select>
-            </li>
             <li class="filter-iterm"><select class="filter" data-filter=".tags" id="tags">
                         <option value="">Tag</option>
                         <?php foreach ($view['tags'] as $tag):?>
