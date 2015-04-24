@@ -77,6 +77,8 @@ function urldecode(str) {
         <div class="w-hidden-tiny w-clearfix div-social admin-menu">
             <div class="w-clearfix filters">
                 <ul class="w-list-unstyled filter-list">
+                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/logout" >D&eacute;connexion</a>
+                    </li>
                     <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/" >Gestion G&eacute;n&eacute;rale</a>
                     </li>
                     <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newPhoto" >Ajout Photo</a>

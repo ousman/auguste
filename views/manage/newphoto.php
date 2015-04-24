@@ -259,6 +259,7 @@
         $("#save-img").click(function (event) {
             event.preventDefault();
             var error = false;
+            $('#error').empty();
             if($("#label").val() == "" || $("#label").val() == undefined){
                 error = true;
                 $('#error').append('<span>Le titre de l\'image doit être renseignée</span><br/>');
@@ -365,6 +366,8 @@
         <div class="w-hidden-tiny w-clearfix div-social admin-menu">
             <div class="w-clearfix filters">
                 <ul class="w-list-unstyled filter-list">
+                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/logout" >D&eacute;connexion</a>
+                    </li>
                     <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/" >Gestion G&eacute;n&eacute;rale</a>
                     </li>
                     <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newPhoto" >Ajout Photo</a>

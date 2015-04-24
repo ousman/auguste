@@ -74,18 +74,11 @@ if (file_exists('controllers/' . strtolower($controller) . '.php')) {
             //die;
             call_user_func_array(array($controller, $action), $params);
         } else {
-            // $_SESSION['erreuraccess'] = "Vous avez essayé d'acceder à des fonctionnalités / informations accessible qu'à nos utilisateurs. Veuillez vous connecter ou créer un compte";
-            // require('controllers/erreurs.php');
-            // $erreurs = new erreurs();
-            // $erreurs->redirect('account/login',0);
+             $_SESSION['erreuraccess'] = "Vous avez essayé d'acceder à des fonctionnalités / informations accessible qu'à l'administrateur.";
+             require('controllers/erreurs.php');
+             $erreurs = new erreurs();
+             $erreurs->redirect('manage/login',0);
 
-            require('controllers/erreurs.php');
-            $erreurs = new erreurs();
-            if (file_exists('controllers/' . strtolower($params[0]) . '.php'))
-                $erreurs->redirect($params[0], 0);
-            else {
-                $erreurs->redirect('home', 0);
-            }
         }
     } else {
         require('controllers/erreurs.php');
