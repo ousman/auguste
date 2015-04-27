@@ -21,8 +21,8 @@ class Manage extends Controller {
 
     function signup() {
         $user = 'phillipe';
-        $password = password_hash("iub2015", PASSWORD_BCRYPT);
-        if (password_verify($_POST['password'], $password) && $_POST['password'] == $user) {
+        $password = '$2y$10$BQLdUl8TBfQwq4CL4OPAZOnW02naGDrekvVrXZKwhpUyZ/znWy4pW';
+        if (password_verify($_POST['password'], $password) && $_POST['login'] == $user) {
             $_SESSION['user'] = 'phillipe';
             $this->redirect('manage', 0);
         } else {
