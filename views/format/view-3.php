@@ -1,43 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  
-  <!-- site tittle -->
-  <title>Auguste BUI</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  
-  <!-- mobile meta tag -->
-  <meta name="viewport" content="">
-  <meta name="generator" content="">
-  
-  <!-- css style -->
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/base.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    
-  <!-- java scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Raleway:200,300,regular,500,600,700,800,900","Playfair Display:regular,italic,700,700italic,900,900italic:latin,cyrillic,latin-ext"]
-      }
-    });
-  </script>
-  
-  <!-- favion -->
-  <link rel="shortcut icon" type="image/x-icon" href="images/fav.png">
-  
-  <!-- apple touch icon -->
-  <link rel="apple-touch-icon" href="images/ico-phone.png">
-  
-</head>
-<body>
-
   <!-- preloader -->
   <div class="loading">
     <div class="loader"><img src="<?=WEBROOT?>public/images/puff.svg" alt="puff.svg">
@@ -127,15 +87,3 @@
         <?php }?>
         
   </div><!-- end portfolio -->
-  
-  
-  <!-- JQUERY SCRIPTS -->
-  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="js/jquery.moutheme.js"></script>
-  <script type="text/javascript" src="js/modernizr.js"></script>
-  <script type="text/javascript" src="js/form.js"></script>
-  <script type="text/javascript" src="js/default.js"></script>
-  <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-</body>
-</html>

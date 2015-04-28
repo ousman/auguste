@@ -30,10 +30,10 @@ return $fileParts;
   <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/style.css">
     <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/mystyle.css">
   <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/font-awesome.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
     
   <!-- java scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script type="text/javascript" src="<?=WEBROOT?>public/js/webfont.js"></script>
   <script>
     WebFont.load({
       google: {
