@@ -82,15 +82,3 @@
         </div>
         <?php }?>
   </div><!-- end portfolio -->
-  
-  
-  <!-- JQUERY SCRIPTS -->
-  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="js/jquery.moutheme.js"></script>
-  <script type="text/javascript" src="js/modernizr.js"></script>
-  <script type="text/javascript" src="js/form.js"></script>
-  <script type="text/javascript" src="js/default.js"></script>
-  <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-</body>
-</html>
