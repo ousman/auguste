@@ -493,6 +493,7 @@ a.filter-star.active{
 
 .inner-banner {
   position: relative;
+
   z-index: 3;
   padding-right: 20px;
   padding-left: 40px;
@@ -500,9 +501,10 @@ a.filter-star.active{
   background-color: #f0f1f3;
 }
 .algin-center {
-  padding-top: 71px;
+  padding-top: 41px;
   padding-bottom: 71px;
   text-align: left;
+
 }
 .inner-sub {
   display: block;
@@ -638,7 +640,7 @@ a.filter-star.active{
   background-repeat: repeat-x;
 }
 .section {
-  padding: 80px 20px;
+  padding: 20px 20px;
 }
 .section.s-gray {
   border-top: 1px solid rgba(204, 204, 204, 0.49);

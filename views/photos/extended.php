@@ -40,8 +40,8 @@
     <div class="move-wrapper">
       <section class="inner-banner" id="top">
         <div class="w-container fixed-container">
-          <div class="algin-center">
-            <h1 class="inner-sub" data-ix="move-3"><span class="domote"><?= $view['photo']->Serie->Label ?> <?= $view['photo']->Tag->Label ?> : </span><?= $view['photo']->Label ?></h1>
+          <div class="algin-center" style="max-height: 150px !important;">
+            <h4 class="inner-sub" data-ix="move-3"><span class="domote"><?= $view['photo']->Serie->Label ?> <?= $view['photo']->Tag->Label ?> : </span><?= $view['photo']->Label ?></h4>
             <div class="tst-txt tst-ban" data-ix="move-3"><?= $view['photo']->Extension ?></div>
           </div>
         </div>
