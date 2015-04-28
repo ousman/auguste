@@ -630,3 +630,7 @@ span.ago{
 .change{
   border-color:#FEFEFE !important;
 }
+
+.move-wrapper{
+  margin-left:10px !important;
+}
