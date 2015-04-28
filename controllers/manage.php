@@ -20,10 +20,10 @@ class Manage extends Controller {
     }
 
     function signup() {
-        $user = 'phillipe';
+        $user = 'philippe';
         $password = '$2y$10$BQLdUl8TBfQwq4CL4OPAZOnW02naGDrekvVrXZKwhpUyZ/znWy4pW';
-        if (password_verify($_POST['password'], $password) && $_POST['login'] == $user) {
-            $_SESSION['user'] = 'phillipe';
+        if (password_verify($_POST['password'], $password) && strcasecmp($_POST['login'], $user) == 0) {
+            $_SESSION['user'] = 'philippe';
             $this->redirect('manage', 0);
         } else {
             $d['view'] = array("title" => "Connexion", "erreur" => "Identifiant et/ou mot de passe incorrect");
