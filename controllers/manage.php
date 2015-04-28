@@ -171,7 +171,7 @@ class Manage extends Controller {
         $photo->save();
 
         $msg = "La Photo a &eacute;t&eacute; enregistr&eacute;";
-        $this->redirect('manage/?msg=' . $msg, 0);
+        $this->redirect('manage?msg=' . $msg, 0);
     }
 
     /**
