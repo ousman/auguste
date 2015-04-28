@@ -50,13 +50,10 @@
           <ul class="w-list-unstyled filter-list">
             <li class="filter-iterm"><a class="filter" href="#" data-filter="all">All</a>
             </li>
-            <li class="filter-iterm"><select class="filter" data-filter=".tags" id="tags">
-                        <option value="">Tag</option>
-                        <?php foreach ($view['tags'] as $tag):?>
-                        <option class="filter" data-filter=".<?= strtolower($tag->Label) ?>" value="<?= $tag->id ?>"><?= $tag->Label ?></option>
-                        <?php endforeach; ?>
-                </select>
+            <?php foreach ($view['tags'] as $tag):?>
+            <li class="filter-iterm"><a class="filter" href="#" data-filter=".<?= strtolower($tag->Label) ?>"><?= $tag->Label ?></a>
             </li>
+            <?php endforeach; ?>
             <li class="filter-iterm">
                 <form method="POST" action="<?=WEBROOT?>photos/search">
                     <input class="filter" type="text" id="search" name="searchString" placeholder="Recherche"> <button class="filter" type="submit" id="searchPhoto">Go</button>
