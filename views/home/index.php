@@ -1,3 +1,6 @@
+<script>
+document.body.style.backgroundColor = "#000000";
+</script>
 <!-- preloader -->
   <div class="loading">
     <div class="loader"><img src="<?= WEBROOT ?>public/images/puff.svg" alt="<?= WEBROOT ?>public/images/puff.svg">
