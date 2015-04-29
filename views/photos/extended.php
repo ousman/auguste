@@ -16,13 +16,13 @@
             </li>
             <li>
               <ul class="w-list-unstyled">
-              <li class="sub-li"><a class="subnav-link" href="<?= WEBROOT ?>format/">3 oeuvre par ligne</a>
+              <li class="sub-li"><a class="subnav-link" href="<?= WEBROOT ?>format/">3 oeuvres par ligne</a>
                 <div class="line"></div>
               </li>
-              <li class="sub-li"><a class="subnav-link" href="<?= WEBROOT ?>">4 oeuvre par ligne</a>
+              <li class="sub-li"><a class="subnav-link" href="<?= WEBROOT ?>">4 oeuvres par ligne</a>
                 <div class="line"></div>
               </li>
-              <li class="sub-li"><a class="subnav-link" href="<?= WEBROOT ?>format/five/">5 oeuvre par ligne</a>
+              <li class="sub-li"><a class="subnav-link" href="<?= WEBROOT ?>format/five/">5 oeuvres par ligne</a>
                 <div class="line"></div>
               </li>
             </ul>
