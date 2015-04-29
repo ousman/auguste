@@ -424,14 +424,14 @@ a.filter-star.active{
 }
 .filter {
   margin-right: 10px;
-  padding: 15px 20px;
+  padding: 10px 13px;
   border: 1px solid #ebebeb;
   border-radius: 2px;
   box-shadow: rgba(242, 242, 242, 0.8) 0px 1px 0px 0px;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   color: #313131;
-  font-size: 13px;
+  font-size: 9px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -440,11 +440,11 @@ a.filter-star.active{
 }
 .filter.filter-star {
   margin-right: 0px;
-  padding: 14px 14px 11px;
+  padding: 7px 7px 2px;
   border-color: #2c3d47 #2e3d47 #2e3d47;
   background-color: #000;
   color: #FFFD0D;
-  font-size: 8px;
+  font-size: 6px;
 }
 .tittle-wrapper {
   position: absolute;
