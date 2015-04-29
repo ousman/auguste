@@ -456,7 +456,7 @@ a.filter-star.active{
   background-color: #000;
   color: white;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .img-wrapper {
   position: relative;
