@@ -12,8 +12,10 @@
  */
 class Tag extends BaseTag
 {
-    function init($label){
+    function init($label, $description, $serie){
         $this->Label = $label;
+        $this->Description = $description;
+        $this->Serie = $serie;
     }
 
 }

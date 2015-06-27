@@ -15,7 +15,7 @@ document.body.style.backgroundColor = "#000000";
         
         <!-- start responsive navigation -->
         <nav class="w-nav-menu res-menu" role="navigation">
-          <ul class="w-list-unstyled">
+            <ul class="w-list-unstyled">
             <li class="li-nav"><a class="nav-link active" href="<?= WEBROOT ?>">August BUI</a>
               <div class="sub-nav">Parce qu'au fond il y a la couleur, la forme ne reste qu'un langage</div>
             </li>
@@ -47,15 +47,16 @@ document.body.style.backgroundColor = "#000000";
       <!-- portfolio filter -->
       <div class="w-hidden-tiny w-clearfix div-social">
         <div class="filters">
-          <ul class="w-list-unstyled filter-list">
+          <ul class="w-list-unstyled filter-list" id="menu-filter">
             <li class="filter-iterm"><a class="filter" href="#" data-filter="all">All</a>
             </li>
-            <?php foreach ($view['tags'] as $tag):?>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".<?= strtolower($tag->Label) ?>"><?= $tag->Label ?></a>
+            <?php foreach ($view['series'] as $serie):?>
+            <li class="filter-iterm"><a class="filter" href="#" data-filter=".<?= strtolower($serie->Label) ?>"><?= $serie->Label ?></a>
             </li>
             <?php endforeach; ?>
             <li class="filter-iterm">
                 <form method="POST" action="<?=WEBROOT?>photos/search">
+                    <input type="hidden" id="webroot" value="<?=WEBROOT?>">
                     <input class="filter" type="text" id="search" name="searchString" placeholder="Recherche"> <button class="filter" type="submit" id="searchPhoto">Go</button>
                 </form>
             </li>

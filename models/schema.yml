@@ -12,6 +12,8 @@ Serie:
   columns:
     Label:
       type: string(255)
+    Description:
+      type: string(8000)
       
 #Tag:
 Tag:
@@ -23,10 +25,22 @@ Tag:
       updated:
         name: Mod_date
     Searchable:
-      fields: [id,Label]
+      fields: [id,Label,IdSerie]
   columns:
     Label:
       type: string(255)
+    Description:
+      type: string(8000)
+    IdSerie:
+      type: integer
+  relations:
+    serie:
+      class: Serie
+      local: IdSerie
+      foreign: id
+      onDelete: SET NULL
+      alias: Serie # on pourra acceder à l'objet avec User->Contact
+      foreignAlias: Tags
       
 #Photo:
 Photo:
@@ -38,7 +52,7 @@ Photo:
       updated:
         name: Mod_date
     Searchable:
-      fields: [id,Label]
+      fields: [id,Label,IdSerie,IdTag]
   columns:
     Label:
       type: string(255)
@@ -59,12 +73,12 @@ Photo:
       foreign: id
       onDelete: SET NULL
       alias: Serie # on pourra acceder à l'objet avec User->Contact
-      foreignAlias: Serie
+      foreignAlias: Series
     tag:
       class: Tag
       local: IdTag
       foreign: id
       onDelete: SET NULL
       alias: Tag # on pourra acceder à l'objet avec User->Contact
-      foreignAlias: Tag
+      foreignAlias: Tags
       

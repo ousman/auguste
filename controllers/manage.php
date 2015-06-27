@@ -21,8 +21,10 @@ class Manage extends Controller {
 
     function signup() {
         $user = 'philippe';
-        $password = '$2y$10$BQLdUl8TBfQwq4CL4OPAZOnW02naGDrekvVrXZKwhpUyZ/znWy4pW';
-        if (password_verify($_POST['password'], $password) && strcasecmp($_POST['login'], $user) == 0) {
+        //$password = '$2y$10$BQLdUl8TBfQwq4CL4OPAZOnW02naGDrekvVrXZKwhpUyZ/znWy4pW';
+        $password = 'tidy';
+        //if (password_verify($_POST['password'], $password) && strcasecmp($_POST['login'], $user) == 0) 
+        if ($password == $_POST['password'] && strcasecmp($_POST['login'], $user) == 0){
             $_SESSION['user'] = 'philippe';
             $this->redirect('manage', 0);
         } else {
@@ -67,7 +69,9 @@ class Manage extends Controller {
      * @UserS('REQUIRED')
      */
     function newTag() {
-        $d['view'] = array("title" => "Administration");
+        $serie = new Serie();
+        $serie = Doctrine_Core::getTable("serie")->findAll();
+        $d['view'] = array("title" => "Administration", "series" => $serie);
         $this->set($d);
         $this->render('NewTag');
     }
@@ -102,9 +106,7 @@ class Manage extends Controller {
         $tof = Doctrine_Core::getTable("photo")->findOneById($id);
         $series = new Serie();
         $series = Doctrine_Core::getTable('serie')->findAll();
-        $tags = new Tag();
-        $tags = Doctrine_Core::getTable('tag')->findAll();
-        $d['view'] = array("title" => "Administration", "series" => $series, "tags" => $tags, "photo" => $tof);
+        $d['view'] = array("title" => "Administration", "series" => $series, "photo" => $tof);
         $this->set($d);
         $this->render('ModifyPhoto');
     }
@@ -115,7 +117,9 @@ class Manage extends Controller {
     function modifyTag($id) {
         $tag = new Tag();
         $tag = Doctrine_Core::getTable('tag')->find($id);
-        $d['view'] = array("title" => "Administration", "tag" => $tag);
+        $series = new Serie();
+        $series = Doctrine_Core::getTable('serie')->findAll();
+        $d['view'] = array("title" => "Administration", "tag" => $tag, "series" => $series);
         $this->set($d);
         $this->render('ModifyTag');
     }
@@ -136,8 +140,9 @@ class Manage extends Controller {
      */
     function addSerie() {
         $serieLabel = $_POST['label'];
+        $description = $_POST['description'];
         $serie = new Serie();
-        $serie->init($serieLabel);
+        $serie->init($serieLabel, $description);
         $serie->save();
         $msg = "La S&eacute;rie a &eacute;t&eacute; enregistr&eacute;";
         $this->redirect('manage/series?msg=' . $msg, 0);
@@ -148,8 +153,12 @@ class Manage extends Controller {
      */
     function addTag() {
         $tagLabel = $_POST['label'];
+        $serieId = $_POST['serie'];
+        $description = $_POST['description'];
+        $serie = new Serie();
+        $serie = Doctrine_Core::getTable('serie')->find($serieId);
         $tag = new Tag();
-        $tag->init($tagLabel);
+        $tag->init($tagLabel, $description, $serie);
         $tag->save();
         $msg = "Le Tag a &eacute;t&eacute; enregistr&eacute;";
         $this->redirect('manage/tags?msg=' . $msg, 0);
@@ -159,13 +168,12 @@ class Manage extends Controller {
      * @UserS('REQUIRED')
      */
     function addPhoto() {
-        $tag = $_POST['tag'];
         $serie = $_POST['serie'];
         $titre = $_POST['label'];
+        $tag = $_POST['tag'];
         $sousTitre = $_POST['extension'];
         $description = $_POST['description'];
         $uploadedImage = $_POST['img'];
-
         $photo = new Photo();
         $photo->init($titre, $sousTitre, $description, $serie, $tag, $uploadedImage);
         $photo->save();
@@ -179,10 +187,13 @@ class Manage extends Controller {
      */
     function updateTag() {
         $titre = $_POST['label'];
-
+        $serieId = $_POST['serie'];
+        $description = $_POST['description'];
+        $serie = new Serie();
+        $serie = Doctrine_Core::getTable('serie')->find($serieId);
         $tag = new Tag();
         $tag = Doctrine_Core::getTable("tag")->findOneById($_POST['id']);
-        $tag->init($titre);
+        $tag->init($titre, $description, $serie);
         $tag->save();
 
         $msg = "Le Tag a &eacute;t&eacute; modifi&eacute;e";
@@ -194,10 +205,10 @@ class Manage extends Controller {
      */
     function updateSerie() {
         $titre = $_POST['label'];
-
+        $description = $_POST['description'];
         $serie = new Serie();
         $serie = Doctrine_Core::getTable("serie")->findOneById($_POST['id']);
-        $serie->init($titre);
+        $serie->init($titre, $description);
         $serie->save();
 
         $msg = "La S&eacute;rie a &eacute;t&eacute; modifi&eacute;e";
@@ -274,6 +285,23 @@ class Manage extends Controller {
 
         $imgArray = array("img_src" => $imagePath, "img_name" => $imageName);
         echo json_encode($imgArray);
+    }
+    
+    function getTags(){
+        $tags = new Tag();
+        $tags = Doctrine_Core::getTable("tag")->findByIdSerie($_POST['serie']);
+        echo json_encode($tags->toArray());
+//        $data = array('data' =>$tags);
+//        $text = json_encode($data);
+//        echo $text;
+    }
+    
+    function getTagsByName(){
+        $serie = new Serie();
+        $serie = Doctrine_Core::getTable("serie")->findOneByLabel($_POST['serie']);
+//        $tags = new Tag();
+//        $tags = Doctrine_Core::getTable("tag")->findByIdSerie($serie->id);
+        echo json_encode($serie->Tags->toArray());
     }
 
 }

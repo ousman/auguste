@@ -90,6 +90,10 @@
 	<label for="exampleInputEmail1">Label</label>
         <input id="serie-label" type="text" class="form-control" id="exampleInputEmail1" placeholder="Serie ID" name="label">
   </div>
+  <div class="form-group">
+      <label for="exampleInputEmail1">Description</label>
+      <textarea id="tag-description" type="text" class="form-control" placeholder="Description" name="description"></textarea>
+  </div>
 <button id="save-serie" type="submit" class="btn btn-default">Ajouter</button>
 </form>
 </div>

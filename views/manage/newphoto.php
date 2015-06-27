@@ -249,56 +249,81 @@
     });
 
     $(document).ready(function () {
-        
+
         $('#error').hide();
 
         $("#validateCrop").click(function (event) {
             $('.avatar-save').removeAttr('disabled');
         });
-        
+
+        $("#serie-label").change(function () {
+            var serie = $("#serie-label").val();
+            console.log(serie);
+            $.ajax({
+                    url: 'getTags/',
+                    type: 'POST',
+                    data: {serie : serie},
+                    dataType: 'JSON',
+                    success: function (data) {
+                        console.log('reussi');
+                        console.log(data);
+                        $('#tag-label').empty();
+                        $('#tag-label').append('<option>Choisissez un Tag</option>');
+                        var d;
+                        for(d in data){
+                            console.log(d);
+                            $('#tag-label').append('<option value ="'+data[d]['id']+'">'+data[d]['Label']+'</option>');
+                        }
+                    },
+                    error: function (e) {
+                        console.log(e);
+                        console.log('erreur');
+                    }});
+        });
+
         $("#save-img").click(function (event) {
             event.preventDefault();
             var error = false;
             $('#error').empty();
-            if($("#label").val() == "" || $("#label").val() == undefined){
+            if ($("#label").val() == "" || $("#label").val() == undefined) {
                 error = true;
                 $('#error').append('<span>Le titre de l\'image doit être renseignée</span><br/>');
             }
-            if($("#extension").val() == "" || $("#extension").val() == undefined){
+            if ($("#extension").val() == "" || $("#extension").val() == undefined) {
                 error = true;
                 $('#error').append('<span>Le sous-titre de l\'image doit être renseignée</span><br/>');
             }
-            if($("#tag-label").val() == "" || $("#tag-label").val() == undefined){
+            if ($("#tag-label").val() == "" || $("#tag-label").val() == undefined) {
                 error = true;
                 $('#error').append('<span>Le tag doit être renseignée</span><br/>');
             }
-            if($("#serie-label").val() == "" || $("#serie-label").val() == undefined){
+            if ($("#serie-label").val() == "" || $("#serie-label").val() == undefined) {
                 error = true;
                 $('#error').append('<span>La s&eacute;rie doit être renseignée</span><br/>');
             }
-            if($("#description").val() == "" || $("#description").val() == undefined){
+            if ($("#description").val() == "" || $("#description").val() == undefined) {
                 error = true;
                 $('#error').append('<span>La description de l\'image doit être renseignée</span><br/>');
             }
-            if($("#img-main").val() == "" || $("#img-main").val() == undefined){
+            if ($("#img-main").val() == "" || $("#img-main").val() == undefined) {
                 error = true;
                 $('#error').append('<span>Vous devez selectionner une image</span><br/>');
             }
-            
-            if(error == true){
+
+            if (error == true) {
                 $('#error').show();
             }
-            else{
+            else {
                 $('#save-img-form').submit();
             }
-            
+
         });
-        
+
     });
-    
-    
-    
-        function deleteImage(k) {
+
+
+
+    function deleteImage(k) {
 
         var imageDeleted = $('#imageContainer img:eq(' + k + ')').attr('src');
         console.log(imageDeleted);
@@ -389,7 +414,7 @@
 
             <h4>Formulaire d'ajout : </h4>
 
-            <form id='save-img-form' role="form" method="POST" action="<?=WEBROOT?>manage/addPhoto">
+            <form id='save-img-form' role="form" method="POST" action="<?= WEBROOT ?>manage/addPhoto">
                 <div id="error" class="alert alert-danger">
                 </div>
                 <div class="form-group">
@@ -412,10 +437,7 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Tag</label>
                     <select id="tag-label" class="form-control" name="tag">
-                            <option value="">Choisissez un Tag</option>
-                        <?php foreach ($view['tags'] as $tag): ?>
-                            <option value="<?= $tag->id ?>"><?= $tag->Label ?></option>
-                        <?php endforeach; ?>
+                        <option value="">Choisissez d'abord une S&eacute;rie</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -426,12 +448,12 @@
                 <div class="row">
                     <div class="carousel gallery" id="imageContainer">
                         <div class="col-sm-6 col-md-3 img-cropped">                            
-                            <img src="<?=WEBROOT?>public/img/default.jpg" width="270" height="270" alt="">
+                            <img src="<?= WEBROOT ?>public/img/default.jpg" width="270" height="270" alt="">
                         </div>
                     </div>
                 </div>
 
-                                <div id="crop-avatar" class="container">
+                <div id="crop-avatar" class="container">
                     <div id="add-pic" class="p_anch avatar-view" style="margin-bottom:10px; border-style:hidden;">
                         <button type="button" class="btn btn-primary bottom-padding my_popup_open"><i class="fa fa-cloud-download"></i>&nbsp; Ajouter Une Photo</button>
                     </div>
@@ -529,8 +551,8 @@
                     <!-- Loading state -->
                     <div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
                 </div>
-                
+
                 <button id="save-img" type="submit" class="btn btn-default">Ajouter</button>
-                
+
             </form>
 

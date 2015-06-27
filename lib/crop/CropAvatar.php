@@ -146,11 +146,13 @@ class CropAvatar {
             $tmp_img_h = $data->height;
             
             
-                $dst_img_w = 1300;
-                $dst_img_h = 755;
+            $dst_img_w = 1024;
+            $dst_img_h = 768;
             
-            
+            $ratio = $tmp_img_w / $tmp_img_h;
 
+            $dst_img_w = $dst_img_w * $ratio;
+            $dst_img_h = $dst_img_h / $ratio;
                 
             
 

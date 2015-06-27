@@ -76,6 +76,8 @@ abstract class BasePhoto extends Doctrine_Record
              array(
               0 => 'id',
               1 => 'Label',
+              2 => 'IdSerie',
+              3 => 'IdTag',
              ),
              ));
         $this->actAs($timestampable0);

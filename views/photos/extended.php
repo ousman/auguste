@@ -60,7 +60,7 @@
             </div>
           </div>
           <div class="i-stack">
-            <div class="spc-bott"><img src="<?= WEBROOT ?>public/uploaded/<?= $view['photo']->Fichier ?>" alt="photo-tab1.jpg">
+              <div class="spc-bott"><img style="width: 800px; height: 600px; display: block; margin-left: auto; margin-right: auto;" src="<?= WEBROOT ?>public/uploaded/<?= $view['photo']->Fichier ?>" alt="photo-tab1.jpg">
             </div>
 
             <div class="spc-bott">
