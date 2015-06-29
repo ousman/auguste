@@ -69,6 +69,29 @@ document.body.style.backgroundColor = "#000000";
             </li>
           </ul>
         </div>
+                    <?php foreach ($view['series'] as $s):?>
+          <div class="filters" id="<?=$s->Label?>" style="display: none;">
+          <ul class="w-list-unstyled filter-list" id="menu-filter">
+            <?php foreach ($s->Tags as $t):?>
+            <li class="filter-iterm"><a class="filter" href="#" data-filter=".<?= strtolower($t->Label) ?>"><?= $t->Label ?></a>
+            </li>
+            <?php endforeach; ?>
+            <li class="filter-iterm"><a class="filter" href="#" data-filter="all">Retour</a>
+            </li>
+            <li class="filter-iterm">
+                <form method="POST" action="<?=WEBROOT?>photos/search">
+                    <input type="hidden" id="webroot" value="<?=WEBROOT?>">
+                    <input class="filter" type="text" id="search" name="searchString" placeholder="Recherche"> <button class="filter" type="submit" id="searchPhoto">Go</button>
+                </form>
+            </li>
+            <li class="filter-iterm">
+              <a class="w-inline-block filter filter-star" href="#" data-filter=".star">
+               <i class="fa fa-star fa-2x"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+          <?php endforeach;?>
       </div><!-- end portfolio filter -->
       
       <!-- start portfolio -->
