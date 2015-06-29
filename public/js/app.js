@@ -19,30 +19,22 @@ $(document).ready(function () {
     });
 
 
-//    $('.filter').click(function () {
-//        var webroot = $('#webroot').val();
-//        console.log($(this).text());
-//        $.ajax({
-//                url: webroot + 'manage/getTagsByName/',
-//                type: 'POST',
-//                data: {serie: $(this).text()},
-//                dataType: 'JSON',
-//                success: function (data) {
-//                    console.log('reussi');
-//                    console.log(data);
-//                    $('#menu-filter').detach();
-//                    $('.filters').append('<ul class="w-list-unstyled filter-list" id="menu-filter"><li class="filter-iterm"><a class="filter" href="#" data-filter="all">All</a></li>');
-//                    var d;
-//                    for (d in data) {
-//                        console.log(d);
-//                        $('#menu-filter').append('<li class="filter-iterm"><a class="filter" href="#" data-filter=".' + data[d]['Label'] + '">' + data[d]['Label'] + '</a></li>');
-//                    }
-//                    $('#filters').append('</ul>')
-//                },
-//                error: function (e) {
-//                    console.log(e);
-//                    console.log('erreur');
-//                }});
-//    })
+    $('.filter').click(function () {
+        var webroot = $('#webroot').val();
+        var serie = $(this).text();
+        var id = $(this).closest('div').attr('id');
+        var div = $(this).closest('div');
+        console.log($(this).text());
+        console.log(id);
+        if(id == 'default'){
+            console.log('je suis dedans');
+            div.hide();
+            $('#'+serie).show();
+        }
+        else if(serie == 'Retour'){
+            div.hide();
+            $('#default').show();
+        }
+    })
 
 });
