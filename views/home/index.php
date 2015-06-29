@@ -72,7 +72,7 @@ document.body.style.backgroundColor = "#000000";
           <ul class="w-list-unstyled filter-list" id="menu-filter">
             <li class="filter-iterm"><a class="filter" href="#" data-filter="all">All</a>
             </li>
-            <?php foreach ($view['tags'] as $t):?>
+            <?php foreach ($s->Tags as $t):?>
             <li class="filter-iterm"><a class="filter" href="#" data-filter=".<?= strtolower($t->Label) ?>"><?= $t->Label ?></a>
             </li>
             <?php endforeach; ?>
