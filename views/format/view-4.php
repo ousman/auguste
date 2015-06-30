@@ -35,6 +35,11 @@ document.body.style.backgroundColor = "#000000";
               <li class="sub-li"><a class="subnav-link" href="<?= WEBROOT ?>format/five/">5 oeuvres par ligne</a>
                 <div class="line"></div>
               </li>
+              <?php foreach ($view['series'] as $s):?>
+            <li class="sub-li"><a class="subnav-link" href="<?= WEBROOT ?>format/four/<?=$s->id?>"><?=$s->Label?></a>
+                <div class="line"></div>
+              </li>
+            <?php endforeach; ?>
             </ul>
             </li>
             <li class="li-nav"><a class="nav-link" href="contact.html">Contact</a>
@@ -99,7 +104,7 @@ document.body.style.backgroundColor = "#000000";
       <!-- start portfolio -->
       <div class="w-clearfix grid" id="Grid">
           <?php foreach($view['photos'] as $photo){?>
-          <div class="mix mix-3 star <?= strtolower($photo->Serie->Label)?> <?= strtolower($photo->Tag->Label)?>" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="<?= WEBROOT ?>photos/display/<?=$photo->id?>"><h4 class="text-port" data-ix="move-up"><?= $photo->Label ?></h4><div class="sub-text" data-ix="move-up-2">Cliquer ici pour plus d'infos</div></a>
+          <div class="mix mix-4 star <?= strtolower($photo->Serie->Label)?> <?= strtolower($photo->Tag->Label)?>" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="<?= WEBROOT ?>photos/display/<?=$photo->id?>"><h4 class="text-port" data-ix="move-up"><?= $photo->Label ?></h4><div class="sub-text" data-ix="move-up-2">Cliquer ici pour plus d'infos</div></a>
           <div class="img-wrapper"><img src="<?= WEBROOT ?>public/uploaded/<?=$photo->Fichier?>" alt="port1.jpg">
             <div class="triangle">
               <div class="left-star">

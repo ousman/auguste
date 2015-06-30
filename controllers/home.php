@@ -3,7 +3,7 @@
 class Home extends Controller {
 
     function index() {
-         $photos = new Photo();
+        $photos = new Photo();
         $q = Doctrine_Query::create()->from('Photo p');
         $q = $q->orderBy('RAND()');
         $q->limit(20);

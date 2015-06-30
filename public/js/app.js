@@ -19,22 +19,22 @@ $(document).ready(function () {
     });
 
 
-    $('.filter').click(function () {
-        var webroot = $('#webroot').val();
-        var serie = $(this).text();
-        var id = $(this).closest('div').attr('id');
-        var div = $(this).closest('div');
-        console.log($(this).text());
-        console.log(id);
-        if(id == 'default'){
-            console.log('je suis dedans');
-            div.hide();
-            $('#'+serie).show();
-        }
-        else if(serie == 'Retour'){
-            div.hide();
-            $('#default').show();
-        }
-    })
+//    $('.filter').click(function () {
+//        var webroot = $('#webroot').val();
+//        var serie = $(this).text();
+//        var id = $(this).closest('div').attr('id');
+//        var div = $(this).closest('div');
+//        console.log($(this).text());
+//        console.log(id);
+//        if(id == 'default' && serie != 'All' && serie != ''){
+//            console.log('je suis dedans');
+//            div.hide();
+//            $('#'+serie).show();
+//        }
+//        else if(serie == 'Retour'){
+//            div.hide();
+//            $('#default').show();
+//        }
+//    })
 
 });

@@ -1,6 +1,7 @@
 <script>
 document.body.style.backgroundColor = "#000000";
 </script>
+
   <!-- preloader -->
   <div class="loading">
     <div class="loader"><img src="<?=WEBROOT?>public/images/puff.svg" alt="puff.svg">
@@ -8,8 +9,9 @@ document.body.style.backgroundColor = "#000000";
   </div>
   
   <!-- start navigation -->
-    <?php //include 'nav.php';?>
-    
+  <?php //include 'nav.php';?>
+  
+  </div>
   <div class="section-wrapper">
     <div class="w-nav w-hidden-main responsive-nav" data-collapse="medium" data-animation="over-left" data-duration="400" data-contain="1">
       <div class="w-container">
@@ -69,7 +71,7 @@ document.body.style.backgroundColor = "#000000";
             </li>
           </ul>
         </div>
-                    <?php foreach ($view['series'] as $s):?>
+                    <?php foreach ($view['tags'] as $s):?>
           <div class="filters" id="<?=$s->Label?>" style="display: none;">
           <ul class="w-list-unstyled filter-list" id="menu-filter">
             <?php foreach ($s->Tags as $t):?>
@@ -107,4 +109,5 @@ document.body.style.backgroundColor = "#000000";
           </div>
         </div>
         <?php }?>
+        
   </div><!-- end portfolio -->
