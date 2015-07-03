@@ -359,30 +359,24 @@
             <a class="w-nav-brand brand-res" href="<?= WEBROOT ?>"><img src="<?= WEBROOT ?>public/images/logo-resp.png" width="150" alt="<?= WEBROOT ?>public/logo.png">
             </a>
 
-            <!-- start responsive navigation -->
             <nav class="w-nav-menu res-menu" role="navigation">
-                <ul class="w-list-unstyled">
-                    <li class="li-nav"><a class="nav-link active" href="<?= WEBROOT ?>">August BUI</a>
-                        <div class="sub-nav">Parce qu'au fond il y a la couleur, la forme ne reste qu'un langage</div>
-                    </li>
-                    <li>
-                        <ul class="w-list-unstyled">
-                            <li class="sub-li"><a class="subnav-link" href="<?= WEBROOT ?>format/">3 oeuvres par ligne</a>
+          <ul class="w-list-unstyled">
+            <li class="li-nav"><a class="nav-link active" href="<?= WEBROOT ?>">August BUI</a>
+            </li>
+            <li>
+              <ul class="w-list-unstyled">
+              <?php foreach ($view['series'] as $s): ?>
+                            <li class="sub-li"><a class="subnav-link" href="<?= WEBROOT ?>format/four/<?= $s->id ?>"><?= $s->Label ?></a>
                                 <div class="line"></div>
                             </li>
-                            <li class="sub-li"><a class="subnav-link" href="<?= WEBROOT ?>">4 oeuvres par ligne</a>
-                                <div class="line"></div>
-                            </li>
-                            <li class="sub-li"><a class="subnav-link" href="<?= WEBROOT ?>format/five/">5 oeuvres par ligne</a>
-                                <div class="line"></div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="li-nav"><a class="nav-link" href="contact.html">Contact</a>
-                        <div class="sub-nav">En savoir plus</div>
-                    </li>
-                </ul>
-            </nav><!-- end responsive navigation -->
+                        <?php endforeach; ?>
+            </ul>
+            </li>
+             <li class="li-nav"><a class="nav-link" href="http://fr-fr.facebook.com/people/Auguste-Bui/100000277766236" target="blank">Contact</a>
+                    <div class="sub-nav">En savoir plus</div>
+          </li>
+          </ul>
+        </nav><!-- end responsive navigation -->
             <div class="w-nav-button menu-button">
                 <div class="w-icon-nav-menu"></div>
             </div>
