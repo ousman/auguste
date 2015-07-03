@@ -91,12 +91,12 @@
         <!-- start portfolio -->
         <div class="w-clearfix grid" id="Grid">
             <!-- To be replaced by database data -->
-            <div class="inner-banner">
+            <div class="inner-banner" style="background-color:black;">
                 <?php foreach ($view['series'] as $s) { ?>
                     <div class="w-container fixed-container">
                         <div class="algin-center" style="max-height: 150px !important;">
                             <h4 class="inner-sub" data-ix="move-3"><a href="<?= WEBROOT ?>format/four/<?= $s->id ?>"><span class="domote"><?= $s->Label ?></span></a></h4>
-                            <div class="tst-txt tst-ban" data-ix="move-3"><?= $s->Description ?></div>
+                            <div class="tst-txt tst-ban" data-ix="move-3" style="color:white;"><?= $s->Description ?></div>
                         </div>
                     </div>
                 <?php } ?>
