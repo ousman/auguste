@@ -12,7 +12,7 @@
         <div class="navigation" data-ix="move-2">
             <ul class="w-list-unstyled">
                 <li class="li-nav"><a class="nav-link active" href="<?= WEBROOT ?>">August BUI</a>
-                    <div class="sub-nav">Parce qu'au fond il y a la couleur, la forme ne reste qu'un langage</div>
+                    
                 </li>
                 <li>
                     <ul class="w-list-unstyled">
@@ -32,7 +32,7 @@
                         <?php endforeach; ?>
                     </ul>
                 </li>
-                <li class="li-nav"><a class="nav-link" href="contact.html">Contact</a>
+                <li class="li-nav"><a class="nav-link" href="http://fr-fr.facebook.com/people/Auguste-Bui/100000277766236" target="blank">Contact</a>
                     <div class="sub-nav">En savoir plus</div>
                 </li>
             </ul>
