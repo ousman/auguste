@@ -634,3 +634,12 @@ span.ago{
 .move-wrapper{
   margin-left:10px !important;
 }
+
+.series-title{
+  color:#f3655e;
+}
+
+.series-description{
+  color:white;
+  font-size:25px;
+}

@@ -11,9 +11,7 @@
 
         <div class="navigation" data-ix="move-2">
             <ul class="w-list-unstyled">
-                <li class="li-nav"><a class="nav-link active" href="<?= WEBROOT ?>">August BUI</a>
-                    
-                </li>
+                <li class="li-nav"><a class="nav-link active" href="<?= WEBROOT ?>home/introduction">Introduction</a></li>
                 <li>
                     <ul class="w-list-unstyled">
                         <!--<li class="sub-li"><a class="subnav-link" href="<?= WEBROOT ?>format/">3 oeuvres par ligne</a>

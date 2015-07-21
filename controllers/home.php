@@ -20,6 +20,24 @@ class Home extends Controller {
         $this->render('index');
     }
 
+    function introduction(){
+        $photos = new Photo();
+        $q = Doctrine_Query::create()->from('Photo p');
+        $q = $q->orderBy('RAND()');
+        $q->limit(20);
+        $photos = $q->execute();
+        
+        $tags = new Tag();
+        $tags = Doctrine_Core::getTable('tag')->findAll();
+        
+        $series = new Serie();
+        $series = Doctrine_Core::getTable('serie')->findAll();
+        
+        $d['view'] = array("title" => "Intro Auguste", "photos" => $photos, "tags" => $tags, "series" => $series);
+        $this->set($d);
+        $this->render('introduction');
+    }
+
 }
 
 ?>

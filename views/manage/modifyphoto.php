@@ -361,7 +361,7 @@
 
             <nav class="w-nav-menu res-menu" role="navigation">
           <ul class="w-list-unstyled">
-            <li class="li-nav"><a class="nav-link active" href="<?= WEBROOT ?>">August BUI</a>
+            <li class="li-nav"><a class="nav-link active" href="<?= WEBROOT ?>home/introduction">Introduction</a>
             </li>
             <li>
               <ul class="w-list-unstyled">
