@@ -18,8 +18,10 @@ class Photos extends Controller {
         $q->limit(5);
         $photos = $q->execute();
         
-        $d['view'] = array("title" => "display", "photo" => $tof, "photos" => $photos);
+        $series = new Serie();
+        $series = Doctrine_Core::getTable('serie')->findAll();
         
+        $d['view'] = array("title" => "display", "photo" => $tof, "photos" => $photos, "series" => $series); 
         $this->set($d);
         $this->render('extended');
     }

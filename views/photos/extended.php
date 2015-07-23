@@ -3,6 +3,7 @@
     <div class="loader"><img src="<?=WEBROOT?>public/images/puff.svg" alt="puff.svg">
     </div>
   </div>
+ 
   <div class="section-wrapper">
     <div class="w-nav w-hidden-main responsive-nav" data-collapse="medium" data-animation="over-left" data-duration="400" data-contain="1">
       <div class="w-container">
@@ -55,7 +56,7 @@
             </div>
           </div>
           <div class="i-stack">
-              <div class="spc-bott"><img style="width: 800px; height: 600px; display: block; margin-left: auto; margin-right: auto;" src="<?= WEBROOT ?>public/uploaded/<?= $view['photo']->Fichier ?>" alt="photo-tab1.jpg">
+              <div class="spc-bott"><img style="width: 750px; height: 750px; display: block; margin-left: auto; margin-right: auto;" src="<?= WEBROOT ?>public/uploaded/<?= $view['photo']->Fichier ?>" alt="photo-tab1.jpg">
             </div>
 
             <div class="spc-bott">

@@ -387,6 +387,8 @@
                 <ul class="w-list-unstyled filter-list">
                     <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/logout" >D&eacute;connexion</a>
                     </li>
+                    <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/introduction" >Introduction</a>
+                    </li>
                     <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/" >Gestion G&eacute;n&eacute;rale</a>
                     </li>
                     <li class="filter-iterm"><a class="filter change" href="<?= WEBROOT ?>manage/newPhoto" >Ajout Photo</a>

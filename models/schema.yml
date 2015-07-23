@@ -82,3 +82,17 @@ Photo:
       alias: Tag # on pourra acceder à l'objet avec User->Contact
       foreignAlias: Tags
       
+#Introduction
+Introduction:
+  tableName: Introduction
+  actAs:
+    Timestampable: 
+      created:
+        name: Add_date
+      updated:
+        name: Mod_date
+    Searchable:
+      fields: [id,Text]
+  columns:
+    Text:
+      type: string(8000)      

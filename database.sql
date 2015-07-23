@@ -1,3 +1,6 @@
+--
+-- Contenu de la table `serie`
+--
 INSERT INTO `serie` (`id`, `label`, `description`, `add_date`, `mod_date`) VALUES
 (2, 'Series 2009-2010 ', 'test', '2015-04-28 14:01:58', '2015-04-28 14:04:23'),
 (3, 'Serie 2006-2007-2008', 'Aucune description', '2015-04-28 14:04:44', '2015-04-28 14:04:44'),
@@ -143,5 +146,9 @@ INSERT INTO `photo_index` (`keyword`, `field`, `position`, `id`) VALUES
 ('body', 'Label', 1, 21);
 
 --
--- Contenu de la table `serie`
+-- Contenu de la table `introduction`
 --
+
+INSERT INTO `introduction` (`id`, `text`, `add_date`, `mod_date`) VALUES
+(1, 'Ceci est une révolution', '2015-07-23 00:00:00', '2015-07-23 00:00:00');
+
