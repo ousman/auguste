@@ -1,4 +1,4 @@
-INSERT INTO `serie` (`id`, `label`, `description`, `add_date`, `mod_date`) VALUES
+INSERT INTO `Serie` (`id`, `label`, `description`, `add_date`, `mod_date`) VALUES
 (2, 'Series 2009-2010 ', 'test', '2015-04-28 14:01:58', '2015-04-28 14:04:23'),
 (3, 'Serie 2006-2007-2008', 'Aucune description', '2015-04-28 14:04:44', '2015-04-28 14:04:44'),
 (4, 'Serie 1990''s', 'Aucune description', '2015-04-28 14:05:29', '2015-04-28 14:05:29'),
@@ -36,7 +36,7 @@ INSERT INTO `serie_index` (`keyword`, `field`, `position`, `id`) VALUES
 -- Contenu de la table `tag`
 --
 
-INSERT INTO `tag` (`id`, `label`, `description`, `idserie`, `add_date`, `mod_date`) VALUES
+INSERT INTO `Tag` (`id`, `label`, `description`, `idserie`, `add_date`, `mod_date`) VALUES
 (3, 'Iron/Colors', 'Aucune description', 2, '2015-04-28 13:50:12', '2015-04-28 13:50:12'),
 (4, 'HTML', 'Aucune description', 3, '2015-04-28 19:28:54', '2015-04-28 19:28:54'),
 (5, 'ME', 'Aucune description', 4, '2015-04-28 19:33:15', '2015-04-28 19:33:15'),
@@ -75,7 +75,7 @@ INSERT INTO `tag_index` (`keyword`, `field`, `position`, `id`) VALUES
 -- Contenu de la table `photo`
 --
 
-INSERT INTO `photo` (`id`, `label`, `fichier`, `extension`, `description`, `idserie`, `idtag`, `add_date`, `mod_date`) VALUES
+INSERT INTO `Photo` (`id`, `label`, `fichier`, `extension`, `description`, `idserie`, `idtag`, `add_date`, `mod_date`) VALUES
 (4, 'No title #1', '20150428193010.png', 'Acrylic on canvas, 50 x 50', 'Process started', 3, 4, '2015-04-28 19:31:14', '2015-04-28 19:31:14'),
 (5, 'Me', '20150428195544.png', 'Au fond, il y a la couleur', 'When I started to looking for, all was black and white.', 5, 5, '2015-04-28 19:39:16', '2015-04-28 19:55:49'),
 (6, 'Speed up', '20150428200432.png', 'Acrylic on canvas, 50 x 50', 'It begins with the body, the HTML language is so constructed', 3, 6, '2015-04-28 20:07:06', '2015-04-28 20:07:06'),
@@ -146,6 +146,6 @@ INSERT INTO `photo_index` (`keyword`, `field`, `position`, `id`) VALUES
 -- Contenu de la table `introduction`
 --
 
-INSERT INTO `introduction` (`id`, `text`, `add_date`, `mod_date`) VALUES
+INSERT INTO `Introduction` (`id`, `text`, `add_date`, `mod_date`) VALUES
 (1, 'Ceci est une révolution', '2015-07-23 00:00:00', '2015-07-23 00:00:00');
 
