@@ -22,8 +22,8 @@ class Manage extends Controller {
     }
 
     function signup() {
-        $user = 'philippe';
-        //$password = '$2y$10$BQLdUl8TBfQwq4CL4OPAZOnW02naGDrekvVrXZKwhpUyZ/znWy4pW';
+        $user = 'Philippe';
+        $password = '$2y$10$.B6JwvtOKKz5TR.fWVKNjunHXCFRKxyyilGQQNyBjyKhepwV7sLXq';
         //$password = 'tidy';
         if (password_verify($_POST['password'], $password) && strcasecmp($_POST['login'], $user) == 0){ 
         //if ($password == $_POST['password'] && strcasecmp($_POST['login'], $user) == 0) {
