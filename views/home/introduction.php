@@ -81,14 +81,7 @@
         <div class="w-clearfix grid" id="Grid">
             <!-- To be replaced by database data -->
             <div class="inner-banner" style="background-color:black;">
-                <?php foreach ($view['series'] as $s) { ?>
-                    <div class="w-container fixed-container">
-                        <div class="algin-center" style="max-height: 150px !important;">
-                            <div class="inner-sub" data-ix="move-3"><a href="<?= WEBROOT ?>format/four/<?= $s->id ?>"><span class="series-title">Bla bla bla</span></a></div>
-                            <div class="tst-txt tst-ban" data-ix="move-3" style="color:white;"></div>
-                        </div>
-                    </div>
-                <?php } ?>
+                <p><?=$view['intro']->Text?></p>
             </div>
         </div><!-- end portfolio -->
 

@@ -33,7 +33,10 @@ class Home extends Controller {
         $series = new Serie();
         $series = Doctrine_Core::getTable('serie')->findAll();
         
-        $d['view'] = array("title" => "Intro Auguste", "photos" => $photos, "tags" => $tags, "series" => $series);
+        $intro = new Introduction();
+        $intro = Doctrine_Core::getTable("introduction")->find(1);
+        
+        $d['view'] = array("title" => "Intro Auguste", "photos" => $photos, "tags" => $tags, "series" => $series, "intro" => $intro);
         $this->set($d);
         $this->render('introduction');
     }
