@@ -1,3 +1,8 @@
+ <style>
+ body{
+  background-color:black;
+ }
+ </style>
  <!-- preloader -->
   <div class="loading">
     <div class="loader"><img src="<?=WEBROOT?>public/images/puff.svg" alt="puff.svg">
