@@ -80,10 +80,10 @@
         <!-- start portfolio -->
         <div class="w-clearfix grid" id="Grid">
             <!-- To be replaced by database data -->
-            <div class="inner-banner" style="background-color:black;">
+            <div class="inner-banner" style="background-color:black; min-height:800px">
                 <?php foreach ($view['series'] as $s) { ?>
                     <div class="w-container fixed-container">
-                        <div class="algin-center" style=" max-height: 150px !important; padding-bottom:0px !important;">
+                        <div class="algin-center" style="padding-bottom:0px !important;">
                             <div class="inner-sub" data-ix="move-3"><a style="font-size:24px !important;" href="<?= WEBROOT ?>format/four/<?= $s->id ?>"><span class="series-title"><?= $s->Label ?></span></a><span class="series-description"> - <?= $s->Description ?></span></div>
                             <div class="tst-txt tst-ban" data-ix="move-3" style="color:white;"></div>
                         </div>
