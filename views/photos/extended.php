@@ -42,7 +42,7 @@
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section" style="background-color:black;">
         <div class="w-container">
           <div class="w-row">
             <div class="w-col w-col-4 w-hidden-small w-hidden-tiny col-left"></div>
@@ -59,7 +59,7 @@
               <div class="spc-bott"><img style="width: 750px; height: 750px; display: block; margin-left: auto; margin-right: auto;" src="<?= WEBROOT ?>public/uploaded/<?= $view['photo']->Fichier ?>" alt="photo-tab1.jpg">
             </div>
 
-            <div class="spc-bott">
+            <div class="spc-bott" style="color:white;">
                 <p><?= $view['photo']->Description ?></p>
             </div>
           </div>
