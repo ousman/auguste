@@ -65,7 +65,7 @@
             </div>
 
             <div class="spc-bott" style="color:white;">
-                <p><?= $view['photo']->Description ?></p>
+                <p style="color:white !important;"><?= $view['photo']->Description ?></p>
             </div>
           </div>
         </div>
