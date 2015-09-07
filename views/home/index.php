@@ -42,7 +42,7 @@
         <!-- portfolio filter -->
         <div class="w-hidden-tiny w-clearfix div-social">
             <div class="filters" id="default">
-                <h3 style="display: block; float: left; margin: 0;">Veuillez selectionner une S&eacute;rie</h3>
+                <h3 style=" font:size: 20px;display: block; float: left; margin: 0;">Click On A Series</h3>
                 <ul class="w-list-unstyled filter-list" id="menu-filter">
                     <li class="filter-iterm">
                         <form method="POST" action="<?= WEBROOT ?>photos/search">

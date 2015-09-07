@@ -34,11 +34,11 @@
       </div>
     </div>
     <div class="move-wrapper">
-      <section class="inner-banner" id="top">
+      <section class="inner-banner" id="top" style="height:75px;">
         <div class="w-container fixed-container">
-          <div class="algin-center" style="max-height: 150px !important;">
-            <h4 class="inner-sub" data-ix="move-3"><span class="domote"><?= $view['photo']->Serie->Label ?> <?= $view['photo']->Tag->Label ?> : </span><?= $view['photo']->Label ?></h4>
-            <div class="tst-txt tst-ban" data-ix="move-3"><?= $view['photo']->Extension ?></div>
+          <div class="algin-center" style="max-height: 50px !important; padding-top:15px !important;  padding-bottom:0px !important;">
+            <span class="inner-sub" data-ix="move-3" style="font-size:20px; margin-bottom:0px !important; "><span class="domote"><?= $view['photo']->Serie->Label ?> <?= $view['photo']->Tag->Label ?> : </span><?= $view['photo']->Label ?></span>
+            <div class="tst-txt tst-ban" style="font-size:15px;" data-ix="move-3"><?= $view['photo']->Extension ?></div>
           </div>
         </div>
       </section>
@@ -47,7 +47,7 @@
           <div class="w-row">
             <div class="w-col w-col-4 w-hidden-small w-hidden-tiny col-left"></div>
             <div class="w-col w-col-4 col-center">
-              <div class="btn-spc"><a class="button btn-small" href="<?= WEBROOT ?>">Toutes Les Photos</a>
+              <div class="btn-spc"><a class="button btn-small" href="<?= WEBROOT ?>">View All Photos</a>
               </div>
             </div>
             <div class="w-col w-col-4 col-right">
