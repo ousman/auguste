@@ -83,8 +83,8 @@
             <div class="inner-banner" style="background-color:black;">
                 <?php foreach ($view['series'] as $s) { ?>
                     <div class="w-container fixed-container">
-                        <div class="algin-center" style="max-height: 150px !important;">
-                            <div class="inner-sub" data-ix="move-3"><a href="<?= WEBROOT ?>format/four/<?= $s->id ?>"><span class="series-title"><?= $s->Label ?></span></a><span class="series-description"> - <?= $s->Description ?></span></div>
+                        <div class="algin-center" style=" max-height: 150px !important;">
+                            <div class="inner-sub" data-ix="move-3"><a style="font-size:24px !important;" href="<?= WEBROOT ?>format/four/<?= $s->id ?>"><span class="series-title"><?= $s->Label ?></span></a><span class="series-description"> - <?= $s->Description ?></span></div>
                             <div class="tst-txt tst-ban" data-ix="move-3" style="color:white;"></div>
                         </div>
                     </div>
