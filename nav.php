@@ -11,7 +11,7 @@
 
         <div class="navigation" data-ix="move-2">
         <ul class="w-list-unstyled">
-          <li class="li-nav"><a class="nav-link active" href="index.html">Portfolio</a>
+          <li class="li-nav"><a class="nav-link active" href="index.html">Introduction</a>
             <div class="sub-nav">work we are proud of</div>
           </li>
           <li>
