@@ -257,7 +257,7 @@ p {
   z-index: 2;
   width: 50px;
   height: 100%;
-  background-color: #2c3d47;
+  background-color: #282828;
   text-align: center;
 }
 .ham2 {
@@ -361,7 +361,7 @@ p {
   height: 100%;
   padding-top: 50px;
   padding-right: 50px;
-  background-color: #273640;
+  background-color: #000;
 }
 
 /*  3. Grid & Filter  */
@@ -372,7 +372,7 @@ a.active{
   transition: all 400ms ease;
 }
 a.active.filter{
-  background: #2c3d47;
+  background: #000;
   color:#fff;
   border:1px solid #2c3d47;
 }
@@ -383,7 +383,7 @@ a.filter-star.active{
   display: none;
 }
 .div-social {
-  padding: 25px 34px;
+  padding: 10px 34px;
   background-color: white;
 }
 .section-wrapper {
@@ -424,14 +424,14 @@ a.filter-star.active{
 }
 .filter {
   margin-right: 10px;
-  padding: 15px 20px;
+  padding: 10px 13px;
   border: 1px solid #ebebeb;
   border-radius: 2px;
   box-shadow: rgba(242, 242, 242, 0.8) 0px 1px 0px 0px;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   color: #313131;
-  font-size: 13px;
+  font-size: 9px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -440,11 +440,11 @@ a.filter-star.active{
 }
 .filter.filter-star {
   margin-right: 0px;
-  padding: 14px 14px 11px;
+  padding: 7px 7px 2px;
   border-color: #2c3d47 #2e3d47 #2e3d47;
-  background-color: #2e3d47;
-  color: white;
-  font-size: 8px;
+  background-color: #000;
+  color: #FFFD0D;
+  font-size: 6px;
 }
 .tittle-wrapper {
   position: absolute;
@@ -453,10 +453,10 @@ a.filter-star.active{
   bottom: 0px;
   padding-top: 24px;
   padding-bottom: 24px;
-  background-color: #2c3d47;
+  background-color: #000;
   color: white;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .img-wrapper {
   position: relative;
@@ -518,7 +518,7 @@ a.filter-star.active{
   background-color: #f0f1f3;
 }
 .algin-center {
-  padding-top: 71px;
+  padding-top: 41px;
   padding-bottom: 71px;
   text-align: left;
 }
@@ -656,7 +656,7 @@ a.filter-star.active{
   background-repeat: repeat-x;
 }
 .section {
-  padding: 80px 20px;
+  padding: 20px 20px;
 }
 .section.s-gray {
   border-top: 1px solid rgba(204, 204, 204, 0.49);
@@ -1530,12 +1530,12 @@ html.w-mod-js *[data-ix="sub-slider-3"] {
   .responsive-nav {
     padding-top: 7px;
     padding-bottom: 7px;
-    background-color: #273640;
+    background-color: #000;
   }
   .menu-button {
     margin-top: 5px;
     padding: 10px;
-    background-color: #2e3d47;
+    background-color: #282828;
     color: white;
     font-size: 27px;
   }
@@ -1547,7 +1547,7 @@ html.w-mod-js *[data-ix="sub-slider-3"] {
   }
   .res-menu {
     padding-top: 35px;
-    background-color: #2e3d47;
+    background-color: #000;
   }
   .social-ico {
     display: none;
