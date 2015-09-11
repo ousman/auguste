@@ -1,133 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  
-  <!-- site tittle -->
-  <title>Flying - Interactive Template Portfolio</title>
-  <meta name="description" content="Flying is a responsive &amp; interactive fullscreen portfolio for artists, photographers, media agencies, restaurants and for everyone that wants to showcase their portfolio in a professional way.">
-  <meta name="keywords" content="responsive, portfolio, professional, artist, fullscreen, photo, photographers, agencies, agencies, php, interaction">
-  
-  <!-- mobile meta tag -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="HTML5 Template">
-  
-  <!-- css style -->
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/base.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    
-  <!-- java scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Raleway:200,300,regular,500,600,700,800,900","Playfair Display:regular,italic,700,700italic,900,900italic:latin,cyrillic,latin-ext"]
-      }
-    });
-  </script>
-  
-  <!-- favion -->
-  <link rel="shortcut icon" type="image/x-icon" href="images/fav.png">
-  
-  <!-- apple touch icon -->
-  <link rel="apple-touch-icon" href="images/ico-phone.png">
-  
-</head>
-<body style="background-color:black;">
+<?php
 
-  <!-- preloader -->
-  <div class="loading">
-    <div class="loader"><img src="images/puff.svg" alt="puff.svg">
-    </div>
-  </div>
-  
-   <?php include ('nav.php');?>
-  </div>
-  <div class="section-wrapper">
-    <div class="w-nav w-hidden-main responsive-nav" data-collapse="medium" data-animation="over-left" data-duration="400" data-contain="1">
-      <div class="w-container">
-        <a class="w-nav-brand brand-res" href="index.html"><img src="images/logo4-1.png" width="70" alt="logo4-1.png">
-        </a>
-        <?php include ('resp-nav.php');?>
-        <div class="w-nav-button menu-button">
-          <div class="w-icon-nav-menu"></div>
-        </div>
-      </div>
-    </div>
-    <div class="move-wrapper">
-    
-      <!-- portfolio filter -->
-      <div class="w-hidden-tiny w-clearfix div-social">
-        <div class="filters">
-          <ul class="w-list-unstyled filter-list">
-            <li class="filter-iterm"><a class="filter" href="#" data-filter="all">All</a>
-            </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".illustration">Illustration</a>
-            </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".logotype">Logotype</a>
-            </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".print">Print</a>
-            </li>
-            <li class="filter-iterm"><a class="filter" href="#" data-filter=".motion">Motion</a>
-            </li>
-            <li class="filter-iterm">
-              <a class="w-inline-block filter filter-star" href="#" data-filter=".star">
-               <i class="fa fa-star fa-2x"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div><!-- end portfolio filter -->
-      
-      <!-- start portfolio -->
-      <div class="w-clearfix grid" id="Grid">
-        <div class="mix print star" id="mix-2" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="photos.php"><h4 class="text-port" data-ix="move-up">Image Stack</h4><div class="sub-text" data-ix="move-up-2">Print</div></a>
-          <div class="img-wrapper"><img src="images/light1.jpg" alt="port1.jpg">
-          </div>
-        </div>
-        <div class="mix illustration motion" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="photos.php"><h4 class="text-port" data-ix="move-up">Tab Slider</h4><div class="sub-text" data-ix="move-up-2">Motion &amp; Illustration</div></a>
-          <div class="img-wrapper"><img src="images/light1.jpg" alt="port9.jpg">
-          </div>
-        </div>
-        <div class="mix motion" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="photos.php"><h4 class="text-port" data-ix="move-up">Gallery</h4><div class="sub-text" data-ix="move-up-2">Motion</div></a>
-          <div class="img-wrapper"><img src="images/light1.jpg" alt="port20.jpg">
-          </div>
-        </div>
-        <div class="mix logotype" id="mix" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="photos.php"><h4 class="text-port" data-ix="move-up">Video</h4><div class="sub-text" data-ix="move-up-2">Logotype</div></a>
-          <div class="img-wrapper"><img src="images/light1.jpg" alt="port4.jpg">
-          </div>
-        </div>
-        <div class="mix logotype illustration star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="photos.php"><h4 class="text-port" data-ix="move-up">The Logo</h4><div class="sub-text" data-ix="move-up-2">Logoype &amp; Illustration</div></a>
-          <div class="img-wrapper"><img src="images/light1.jpg" alt="port5.jpg">
-          </div>
-        </div>
-        <div class="mix illustration motion star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="photos.php"><h4 class="text-port" data-ix="move-up">Work Table</h4><div class="sub-text" data-ix="move-up-2">Illustration &amp; Motion</div></a>
-          <div class="img-wrapper"><img src="images/light1.jpg" alt="port7.jpg">
-          </div>
-        </div>
-        <div class="mix motion" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="photos.php"><h4 class="text-port" data-ix="move-up">Purple Fish</h4><div class="sub-text" data-ix="move-up-2">Motion</div></a>
-          <div class="img-wrapper"><img src="images/light1.jpg" alt="port22.jpg">
-          </div>
-        </div>
-        <div class="mix illustration star" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="photos.php"><h4 class="text-port" data-ix="move-up">iStrange</h4><div class="sub-text" data-ix="move-up-2">Illustration</div></a>
-          <div class="img-wrapper"><img src="images/light1.jpg" alt="5port15.jpg">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div><!-- end portfolio -->
-  
-  <!-- JQUERY SCRIPTS -->
-  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="js/jquery.moutheme.js"></script>
-  <script type="text/javascript" src="js/modernizr.js"></script>
-  <script type="text/javascript" src="js/form.js"></script>
-  <script type="text/javascript" src="js/default.js"></script>
-  <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-</body>
-</html>
+setlocale(LC_ALL, 'fr_FR.UTF-8');
+define('WEBROOT', str_replace('index.php', '', $_SERVER['SCRIPT_NAME']));
+define('ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']));
+
+require(ROOT . 'conf/config.php');
+require(ROOT . 'core/controller.php');
+
+require(ROOT . 'lib/addendum/annotations.php');
+require(ROOT . 'annotations/MyAnnotations.php');
+require(ROOT . 'core/AnnotationManager.php');
+require(ROOT . 'core/SecurityManager.php');
+require(ROOT . 'controllers/UserSecurity.php');
+require(ROOT . 'controllers/AdminSecurity.php');
+
+//Facebook Connect
+// require(ROOT.'lib/facebookConnect/autoload.php');
+// define('appId','');
+// define('appSecret','');
+// //define('SITE','http://dgknowledge.com/PreBama/facebookconnect.php');
+// define('SITE','');
+// use Facebook\FacebookSession;
+// FacebookSession::setDefaultApplication(appId,appSecret);
+//End Facebook
+
+require(ROOT . 'lib/vendor/doctrine/Doctrine.php');
+require(ROOT . 'core/Model.php');
+require(ROOT . 'lib/html2pdf/html2pdf.class.php');
+require(ROOT . 'lib/crop/CropAvatar.php');
+if (isset($_GET['p'])) {
+    $params = explode('/', $_GET['p']);
+    $controller = $params[0];
+    $action = isset($params[1]) ? $params[1] : 'index';
+}
+//urldecode(var_dump($params));
+//echo "<br>".urldecode(str)$_GET['p'];
+//die;
+if (empty($controller)) {
+    $controller = 'home';
+    $action = 'index';
+    $params = array();
+}
+
+//$test = Doctrine_Core::getTable('Annonce');
+//$test->batchUpdateIndex();
+//require('controllers/soon.php');
+//$contr = new Soon();
+//$contr->index(); 
+//die;
+
+session_start(); // Session initialisation
+if (file_exists('controllers/' . strtolower($controller) . '.php')) {
+    require('controllers/' . strtolower($controller) . '.php');
+    $controller = new $controller();
+
+    if (!method_exists($controller, $action)) {
+        if (get_class($controller) == "manage") {
+            $action = "index";
+           
+        }
+    }
+
+    if (method_exists($controller, $action)) {
+        if (UserSecurity::Check($controller, $action) && AdminSecurity::Check($controller, $action)) {
+             if(get_class($controller)=="manage" && $action=='index'){
+             	unset($params[0]);	
+             }
+             else{
+             	unset($params[0]); unset($params[1]);	
+             } 
+            //echo get_class($controller)."=>".$action;
+            //var_dump($params);
+            //die;
+            call_user_func_array(array($controller, $action), $params);
+        } else {
+             $_SESSION['erreuraccess'] = "Vous avez essayé d'acceder à des fonctionnalités / informations accessible qu'à l'administrateur.";
+             require('controllers/erreurs.php');
+             $erreurs = new erreurs();
+             $erreurs->redirect('manage/login',0);
+
+        }
+    } else {
+        require('controllers/erreurs.php');
+        $erreurs = new erreurs();
+        if (file_exists('controllers/' . strtolower($params[0]) . '.php'))
+            $erreurs->redirect($params[0], 0);
+        else {
+            $erreurs->redirect('home', 0);
+        }
+    }
+} else {
+    require('controllers/erreurs.php');
+    $erreurs = new erreurs();
+
+    if (file_exists('controllers/' . strtolower($params[0]) . '.php'))
+        $erreurs->redirect($params[0], 0);
+    else {
+        $erreurs->redirect('home', 0);
+    }
+}
+?>
