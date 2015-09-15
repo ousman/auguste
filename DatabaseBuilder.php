@@ -1,5 +1,5 @@
 <?php
-
+/*
 define('WEBROOT',str_replace('DatabaseBuilder.php','',$_SERVER['SCRIPT_NAME']));
 define('ROOT',str_replace('DatabaseBuilder.php','',$_SERVER['SCRIPT_FILENAME']));
 
