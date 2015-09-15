@@ -1,5 +1,5 @@
 <?php
-
+/*
 define('WEBROOT',str_replace('DatabaseBuilder.php','',$_SERVER['SCRIPT_NAME']));
 define('ROOT',str_replace('DatabaseBuilder.php','',$_SERVER['SCRIPT_FILENAME']));
 
@@ -35,7 +35,6 @@ Doctrine_Core::createTablesFromModels(ROOT.'models');
 
 $codeSql = file_get_contents("database.sql");
 
-echo $codeSql;
 //$codeSql = file_get_contents("databasePROD.sql");
 
 $st = $conn->execute($codeSql);
