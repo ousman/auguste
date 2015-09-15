@@ -81,29 +81,25 @@ INSERT INTO `tag_index` (`keyword`, `field`, `position`, `id`) VALUES
 -- Contenu de la table `photo`
 --
 
---
--- Contenu de la table `Photo`
---
-
 INSERT INTO `Photo` (`id`, `label`, `fichier`, `extension`, `description`, `idserie`, `idtag`, `add_date`, `mod_date`) VALUES
-(4, 'No title #1', '20150428193010.png', 'Acrylic on canvas, 50 x 50', 'Process started', 3, 4, '2015-04-28 19:31:14', '2015-04-28 19:31:14'),
-(5, 'Me', '20150428195544.png', 'Au fond, il y a la couleur', 'When I started to looking for, all was black and white.', 5, 13, '2015-04-28 19:39:16', '2015-09-07 15:15:53'),
-(6, 'Speed up', '20150428200432.png', 'Acrylic on canvas, 50 x 50', 'It begins with the body, the HTML language is so constructed', 3, 6, '2015-04-28 20:07:06', '2015-04-28 20:07:06'),
-(7, '"How"', '20150428200856.png', 'Acrylic on canvas, 33 x 41', '"How is life"', 3, 6, '2015-04-28 20:09:53', '2015-09-07 14:56:55'),
-(8, '"DotCom"', '20150428201250.png', 'Acrylic on canvas, 50 x 50', 'Trade, a speech whose end is known, dot.', 3, 6, '2015-04-28 20:14:49', '2015-04-28 20:16:25'),
-(9, 'No title #6', '20150428201909.png', 'Acrylic on canvas, 50 x 50', 'The binary information is obvious, that''s what makes it visible', 3, 6, '2015-04-28 20:20:42', '2015-04-28 20:20:42'),
-(10, '"Money"', '20150428202126.png', 'Acrylic on canvas, 60 x 60', 'An abstraction that brings us closer to reality, for our good.', 3, 7, '2015-04-28 20:23:03', '2015-04-28 20:23:03'),
-(11, '"MS"', '20150428202417.png', 'Acrylic on canvas, 60 x 60', 'a community, a network, an area where freedom is a rule', 3, 8, '2015-04-28 20:26:25', '2015-04-28 20:26:25'),
-(12, '"YWI"', '20150428202756.png', 'Acrylic on canvas, 60 x 60', 'The will goes through the authority', 3, 8, '2015-04-28 20:31:29', '2015-04-28 20:31:29'),
-(13, 'No title #4', '20150428203302.png', 'Acrylic on canvas, 130 x 130', 'Rotting to produce. A very long fermentation of organic matter can lead the energy needed for human decay.', 3, 8, '2015-04-28 20:36:10', '2015-09-07 14:57:34'),
-(14, 'No title #2', '20150428203658.png', 'Acrylic on canvas, 50 x 50', 'Produce by man, a necessity useful :( without verb :) .', 3, 8, '2015-04-28 20:39:21', '2015-04-28 20:39:21'),
-(15, 'No title #3', '20150428204003.png', 'Acrylic on canvas, 60 x 60', 'The process is passed, through it.', 3, 8, '2015-04-28 20:41:59', '2015-04-28 20:41:59'),
-(16, '"SW"', '20150428204302.png', 'Acrylic on canvas, 55 x 46', 'The play area of the screen where the vacuum is infinite.', 3, 9, '2015-04-28 20:45:30', '2015-09-07 14:58:04'),
-(17, 'No title #5', '20150428204634.png', 'Acrylic on canvas, 55 x 46', 'My screen is human, it sees, it listens, it speaks.', 3, 9, '2015-04-28 20:49:08', '2015-09-07 14:59:03'),
-(18, '"Numbers"', '20150428205009.png', 'Acrylic on canvas, 61 x 38', 'Because abroad is the source of reason', 3, 10, '2015-04-28 20:52:09', '2015-09-07 15:00:04'),
-(19, '"ThiÃªu" ', '20150428205309.png', 'Acrylic on canvas, 130 x 130', 'That forgetfulness of this ash gives us the energy to do. It will take time.', 3, 11, '2015-04-28 20:56:01', '2015-09-07 15:00:36'),
-(20, 'No title #1', '20150428205720.png', 'Acrylic on canvas, 33 x 41', 'Without inverted commas, they did.', 3, 11, '2015-04-28 20:59:56', '2015-09-07 15:01:04'),
-(21, '"/body"', '20150428210034.png', 'Acrylic on canvas, 130 x 130', 'Limited by the body, the end of a life.', 3, 6, '2015-04-28 21:01:45', '2015-09-07 15:01:34'),
+(4, 'No title #1', '20150906212526.png', 'Acrylic on canvas, 50 x 50', 'Process started', 3, 4, '2015-04-28 19:31:14', '2015-04-28 19:31:14'),
+(5, 'Me', '20150906205559.png', 'Au fond, il y a la couleur', 'When I started to looking for, all was black and white.', 5, 13, '2015-04-28 19:39:16', '2015-09-07 15:15:53'),
+(6, 'Speed up', '20150906210012.png', 'Acrylic on canvas, 50 x 50', 'It begins with the body, the HTML language is so constructed', 3, 6, '2015-04-28 20:07:06', '2015-04-28 20:07:06'),
+(7, '"How"', '20150906210331.png', 'Acrylic on canvas, 33 x 41', '"How is life"', 3, 6, '2015-04-28 20:09:53', '2015-09-07 14:56:55'),
+(8, '"DotCom"', '20150906210457.png', 'Acrylic on canvas, 50 x 50', 'Trade, a speech whose end is known, dot.', 3, 6, '2015-04-28 20:14:49', '2015-04-28 20:16:25'),
+(9, 'No title #6', '20150906210552.png', 'Acrylic on canvas, 50 x 50', 'The binary information is obvious, that''s what makes it visible', 3, 6, '2015-04-28 20:20:42', '2015-04-28 20:20:42'),
+(10, '"Money"', '20150906210744.png', 'Acrylic on canvas, 60 x 60', 'An abstraction that brings us closer to reality, for our good.', 3, 7, '2015-04-28 20:23:03', '2015-04-28 20:23:03'),
+(11, '"MS"', '20150906210837.png', 'Acrylic on canvas, 60 x 60', 'a community, a network, an area where freedom is a rule', 3, 8, '2015-04-28 20:26:25', '2015-04-28 20:26:25'),
+(12, '"YWI"', '20150906210924.png', 'Acrylic on canvas, 60 x 60', 'The will goes through the authority', 3, 8, '2015-04-28 20:31:29', '2015-04-28 20:31:29'),
+(13, 'No title #4', '20150906211239.png', 'Acrylic on canvas, 130 x 130', 'Rotting to produce. A very long fermentation of organic matter can lead the energy needed for human decay.', 3, 8, '2015-04-28 20:36:10', '2015-09-07 14:57:34'),
+(14, 'No title #2', '20150906211442.png', 'Acrylic on canvas, 50 x 50', 'Produce by man, a necessity useful :( without verb :) .', 3, 8, '2015-04-28 20:39:21', '2015-04-28 20:39:21'),
+(15, 'No title #3', '20150906211540.png', 'Acrylic on canvas, 60 x 60', 'The process is passed, through it.', 3, 8, '2015-04-28 20:41:59', '2015-04-28 20:41:59'),
+(16, '"SW"', '20150906211835.png', 'Acrylic on canvas, 55 x 46', 'The play area of the screen where the vacuum is infinite.', 3, 9, '2015-04-28 20:45:30', '2015-09-07 14:58:04'),
+(17, 'No title #5', '20150906212014.png', 'Acrylic on canvas, 55 x 46', 'My screen is human, it sees, it listens, it speaks.', 3, 9, '2015-04-28 20:49:08', '2015-09-07 14:59:03'),
+(18, '"numbers"', '20150906212113.png', 'Acrylic on canvas, 61 x 38', 'Because abroad is the source of reason', 3, 10, '2015-04-28 20:52:09', '2015-09-07 15:00:04'),
+(19, '"ThiÃƒÂªu"', '20150906212333.png', 'Acrylc on canvas, 130 x 130', 'That forgetfulness of this ash gives us the energy to do. It will take time.', 3, 11, '2015-04-28 20:56:01', '2015-09-07 15:00:36'),
+(20, 'No title #1', '20150906212526.png', 'Acrylic on canvas, 33 x 41', 'Without inverted commas, they did.', 3, 11, '2015-04-28 20:59:56', '2015-09-07 15:01:04'),
+(21, '"/body"', '20150906212701.png', 'Acrylic on canvas, 130 x 130', 'Limited by the body, the end of a life.', 3, 6, '2015-04-28 21:01:45', '2015-09-07 15:01:34'),
 (23, '"AliÃ©nation"', '20150907152613.png', 'Acrylic on canvas and steel, 27 x 22', 'Curves and lines.\r\nLines and curves', 4, 3, '2015-09-07 15:26:18', '2015-09-07 15:26:18'),
 (24, 'No title', '20150907153210.png', 'Acrylic on canvas and iron, 27 x 22', 'Bones and products', 4, 3, '2015-09-07 15:32:15', '2015-09-07 15:32:15'),
 (25, 'No title', '20150907153755.png', 'Acrylic on canvas and steel, 40 x 40', 'Color, text, steel', 4, 3, '2015-09-07 15:38:01', '2015-09-07 15:38:01');
