@@ -101,7 +101,7 @@
         <div class="w-clearfix grid" id="Grid">
             <?php foreach ($view['photos'] as $photo) { ?>
                 <div class="mix mix-3 star <?= strtolower($photo->Serie->Label) ?> <?= strtolower($photo->Tag->Label) ?>" data-ix="hover-port"><a class="w-inline-block tittle-wrapper" href="<?= WEBROOT ?>photos/display/<?= $photo->id ?>"><h4 class="text-port" data-ix="move-up"><?= $photo->Label ?></h4><div class="sub-text" data-ix="move-up-2">Cliquer ici pour plus d'infos</div></a>
-                    <div class="img-wrapper"><img src="<?= WEBROOT ?>public/uploaded/<?= $photo->Fichier ?>" alt="port1.jpg">
+                    <div class="img-wrapper"><img src="<?= WEBROOT ?>public/uploaded/<?= $photo->Fichier ?>" onerror="this.onerror=null;this.src='<?= WEBROOT ?>public/images/port1.jpg';" alt="port1.jpg">
                         <div class="triangle">
                             <div class="left-star">
                                 <i class="fa fa-star fa-2x"></i>

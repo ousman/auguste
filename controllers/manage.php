@@ -16,7 +16,11 @@ class Manage extends Controller {
     }
 
     function login() {
-        $d['view'] = array("title" => "Connexion");
+        $tof = new Photo();
+        $tof = Doctrine_Core::getTable("photo")->findAll();
+        $serie = new Serie();
+        $serie = Doctrine_Core::getTable("serie")->findAll();
+        $d['view'] = array("title" => "Connexion", "photos" => $tof, "series" => $serie);
         $this->set($d);
         $this->render('login');
     }

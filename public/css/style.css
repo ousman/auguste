@@ -488,12 +488,29 @@ a.filter-star.active{
   margin-left: auto;
   background-color: #344652;
 }
+.left-star {
+  position: absolute;
+  top: -47px;
+  right: 11px;
+  z-index: 5;
+  display: block;
+  color: white;
+  font-size: 7px;
+}
+.triangle {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 0px;
+  height: 0px;
+  border-top: 60px solid #2c3d47;
+  border-left: 60px solid transparent;
+}
 
 /*  4. Elements  */
 
 .inner-banner {
   position: relative;
-
   z-index: 3;
   padding-right: 20px;
   padding-left: 40px;
@@ -504,14 +521,13 @@ a.filter-star.active{
   padding-top: 41px;
   padding-bottom: 71px;
   text-align: left;
-
 }
 .inner-sub {
   display: block;
   margin-top: 0px;
   margin-bottom: 20px;
   color: #414141;
-  font-size: 28px;
+  font-size: 38px;
   font-weight: 400;
 }
 .and {
@@ -1531,7 +1547,7 @@ html.w-mod-js *[data-ix="sub-slider-3"] {
   }
   .res-menu {
     padding-top: 35px;
-    background-color: #282828;
+    background-color: #000;
   }
   .social-ico {
     display: none;
