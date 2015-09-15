@@ -24,16 +24,16 @@ return $fileParts;
   <meta name="generator" content="">
   
   <!-- css style -->
-  <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/base.css">
-  <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/mystyle.css">
-  <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/bootstrap.min.css?<?php echo time(); ?>">
+  <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/normalize.css?<?php echo time(); ?>">
+  <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/base.css?<?php echo time(); ?>">
+  <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/style.css?<?php echo time(); ?>">
+    <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/mystyle.css?<?php echo time(); ?>">
+  <link rel="stylesheet" type="text/css" href="<?=WEBROOT?>public/css/font-awesome.min.css?<?php echo time(); ?>">
 
     
   <!-- java scripts -->
-    <script type="text/javascript" src="<?=WEBROOT?>public/js/webfont.js"></script>
+    <script type="text/javascript" src="<?=WEBROOT?>public/js/webfont.js?<?php echo time(); ?>"></script>
   <script>
     WebFont.load({
       google: {
@@ -42,16 +42,16 @@ return $fileParts;
     });
   </script>
   <!-- JQUERY SCRIPTS -->
-  <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery-1.11.2.min.js?<?php echo time(); ?>"></script>
   <script type="text/javascript">$(window).bind("load", function() { console.log("dom have loaded") })</script>
     <script type="text/javascript">$(window).bind("load", function() { console.log("test") })</script>
-  <script type="text/javascript" src="<?= WEBROOT ?>public/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery.moutheme.js"></script>
-  <script type="text/javascript" src="<?= WEBROOT ?>public/js/modernizr.js"></script>
-  <script type="text/javascript" src="<?= WEBROOT ?>public/js/form.js"></script>
-  <script type="text/javascript" src="<?= WEBROOT ?>public/js/default.js"></script>
-  <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery.mixitup.min.js"></script>
-  <script type="text/javascript" src="<?=WEBROOT?>public/js/app.js"></script>
+  <script type="text/javascript" src="<?= WEBROOT ?>public/js/bootstrap.min.js?<?php echo time(); ?>"></script>
+  <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery.moutheme.js?<?php echo time(); ?>"></script>
+  <script type="text/javascript" src="<?= WEBROOT ?>public/js/modernizr.js?<?php echo time(); ?>"></script>
+  <script type="text/javascript" src="<?= WEBROOT ?>public/js/form.js?<?php echo time(); ?>"></script>
+  <script type="text/javascript" src="<?= WEBROOT ?>public/js/default.js?<?php echo time(); ?>"></script>
+  <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery.mixitup.min.js?<?php echo time(); ?>"></script>
+  <script type="text/javascript" src="<?=WEBROOT?>public/js/app.js?<?php echo time(); ?>"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
     
   <!-- favion -->
