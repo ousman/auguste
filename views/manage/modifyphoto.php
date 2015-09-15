@@ -555,7 +555,7 @@
                     <div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
                 </div>
 
-                <button id="save-img" type="submit" class="btn btn-default">value="Ajouter"</button>
+                <button id="save-img" type="submit" class="btn btn-default">Enregistrer</button>
 
             </form>
 
