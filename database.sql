@@ -99,7 +99,10 @@ INSERT INTO `Photo` (`id`, `label`, `fichier`, `extension`, `description`, `idse
 (18, '"numbers"', '20150906212113.png', 'Acrylic on canvas, 61 x 38', 'Because abroad is the source of reason', 2, 10, '2015-04-28 20:52:09', '2015-04-28 20:52:09'),
 (19, '"ThiÃƒÂªu"', '20150906212333.png', 'Acrylic on canvas, 130 x 130', 'That forgetfulness of this ash gives us the energy to do. It will take time.', 2, 11, '2015-04-28 20:56:01', '2015-04-28 20:56:01'),
 (20, 'No title #1', '20150906212526.png', 'Acrylic on canvas, 33 x 41', 'Without inverted commas, they did.', 2, 11, '2015-04-28 20:59:56', '2015-04-28 20:59:56'),
-(21, '"/body"', '20150906212701.png', 'Acrylic on canvas, 130 x 130', 'Limited by the body, the end of a life.', 2, 11, '2015-04-28 21:01:45', '2015-04-28 21:01:45');
+(21, '"/body"', '20150906212701.png', 'Acrylic on canvas, 130 x 130', 'Limited by the body, the end of a life.', 2, 11, '2015-04-28 21:01:45', '2015-04-28 21:01:45'),
+(23, '"AliÃ©nation"', '20150907152613.png', 'Acrylic on canvas and steel, 27 x 22', 'Curves and lines.\r\nLines and curves', 4, 3, '2015-09-07 15:26:18', '2015-09-07 15:26:18'),
+(24, 'No title', '20150907153210.png', 'Acrylic on canvas and iron, 27 x 22', 'Bones and products', 4, 3, '2015-09-07 15:32:15', '2015-09-07 15:32:15'),
+(25, 'No title', '20150907153755.png', 'Acrylic on canvas and steel, 40 x 40', 'Color, text, steel', 4, 3, '2015-09-07 15:38:01', '2015-09-07 15:38:01');
 
 --
 -- Contenu de la table `photo_index`
