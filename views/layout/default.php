@@ -43,6 +43,8 @@ return $fileParts;
   </script>
   <!-- JQUERY SCRIPTS -->
   <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript">$(window).bind("load", function() { console.log("dom have loaded") })</script>
+    <script type="text/javascript">$(window).bind("load", function() { console.log("test") })</script>
   <script type="text/javascript" src="<?= WEBROOT ?>public/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="<?= WEBROOT ?>public/js/jquery.moutheme.js"></script>
   <script type="text/javascript" src="<?= WEBROOT ?>public/js/modernizr.js"></script>
